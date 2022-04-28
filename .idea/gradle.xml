@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -11,9 +12,35 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/SettingsLib" />
             <option value="$PROJECT_DIR$/SettingsLibActionBarShadow" />
+            <option value="$PROJECT_DIR$/SettingsLibActionButtonsPreference" />
+            <option value="$PROJECT_DIR$/SettingsLibAdaptiveIcon" />
+            <option value="$PROJECT_DIR$/SettingsLibAppPreference" />
+            <option value="$PROJECT_DIR$/SettingsLibBannerMessagePreference" />
+            <option value="$PROJECT_DIR$/SettingsLibBarChartPreference" />
+            <option value="$PROJECT_DIR$/SettingsLibCollapsingToolbarBaseActivity" />
+            <option value="$PROJECT_DIR$/SettingsLibDisplayDensityUtils" />
+            <option value="$PROJECT_DIR$/SettingsLibEmergencyNumber" />
+            <option value="$PROJECT_DIR$/SettingsLibEntityHeaderWidgets" />
+            <option value="$PROJECT_DIR$/SettingsLibFooterPreference" />
             <option value="$PROJECT_DIR$/SettingsLibHelpUtils" />
+            <option value="$PROJECT_DIR$/SettingsLibIllustrationPreference" />
+            <option value="$PROJECT_DIR$/SettingsLibLayoutPreference" />
+            <option value="$PROJECT_DIR$/SettingsLibMainSwitchPreference" />
+            <option value="$PROJECT_DIR$/SettingsLibProgressBar" />
+            <option value="$PROJECT_DIR$/SettingsLibRadioButtonPreference" />
             <option value="$PROJECT_DIR$/SettingsLibRestrictedLockUtils" />
+            <option value="$PROJECT_DIR$/SettingsLibSearchWidget" />
+            <option value="$PROJECT_DIR$/SettingsLibSettingsSpinner" />
+            <option value="$PROJECT_DIR$/SettingsLibSettingsTheme" />
+            <option value="$PROJECT_DIR$/SettingsLibSettingsTransition" />
+            <option value="$PROJECT_DIR$/SettingsLibTopIntroPreference" />
+            <option value="$PROJECT_DIR$/SettingsLibTwoTargetPreference" />
+            <option value="$PROJECT_DIR$/SettingsLibUsageProgressBarPreference" />
+            <option value="$PROJECT_DIR$/SettingsLibUtils" />
+            <option value="$PROJECT_DIR$/WifiTrackerLib" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/iconloader" />
+            <option value="$PROJECT_DIR$/lottie" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
