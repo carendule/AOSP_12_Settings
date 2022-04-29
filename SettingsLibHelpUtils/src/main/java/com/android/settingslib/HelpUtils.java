@@ -33,6 +33,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 
+
+import com.android.settingslib.widget.R;
+
 import java.net.URISyntaxException;
 import java.util.Locale;
 

@@ -1119,15 +1119,15 @@
     <!-- [CHAR_LIMIT=50] Short label for imminent shutdown warning of device -->
     <string name="power_remaining_duration_only_shutdown_imminent" product="default">Phone may shut down soon</string>
     <!-- [CHAR_LIMIT=50] Short label for imminent shutdown warning of device -->
-    <string name="power_remaining_duration_only_shutdown_imminent" product="tablet">Tablet may shut down soon</string>
+<!--<string name="power_remaining_duration_only_shutdown_imminent" product="tablet">Tablet may shut down soon</string>-->
     <!-- [CHAR_LIMIT=50] Short label for imminent shutdown warning of device -->
-    <string name="power_remaining_duration_only_shutdown_imminent" product="device">Device may shut down soon</string>
+<!--<string name="power_remaining_duration_only_shutdown_imminent" product="device">Device may shut down soon</string>-->
     <!-- [CHAR_LIMIT=60] Label for battery level chart when shutdown is imminent-->
     <string name="power_remaining_duration_shutdown_imminent" product="default">Phone may shut down soon (<xliff:g id="level">%1$s</xliff:g>)</string>
     <!-- [CHAR_LIMIT=60] Label for battery level chart when shutdown is imminent-->
-    <string name="power_remaining_duration_shutdown_imminent" product="tablet">Tablet may shut down soon (<xliff:g id="level">%1$s</xliff:g>)</string>
+<!--<string name="power_remaining_duration_shutdown_imminent" product="tablet">Tablet may shut down soon (<xliff:g id="level">%1$s</xliff:g>)</string>-->
     <!-- [CHAR_LIMIT=60] Label for battery level chart when shutdown is imminent-->
-    <string name="power_remaining_duration_shutdown_imminent" product="device">Device may shut down soon (<xliff:g id="level">%1$s</xliff:g>)</string>
+<!--<string name="power_remaining_duration_shutdown_imminent" product="device">Device may shut down soon (<xliff:g id="level">%1$s</xliff:g>)</string>-->
 
     <!-- [CHAR_LIMIT=40] Label for battery level chart when charging -->
     <string name="power_charging"><xliff:g id="level">%1$s</xliff:g> - <xliff:g id="state">%2$s</xliff:g></string>
@@ -1536,4 +1536,8 @@
 
     <!-- Content description of the no calling for accessibility (not shown on the screen). [CHAR LIMIT=NONE] -->
     <string name="accessibility_no_calling">No calling.</string>
+    <!-- Summary for switch preference to denote it is switched on [CHAR LIMIT=50] -->
+    <string name="enabled_by_admin">Enabled by admin</string>
+    <!-- Summary for switch preference to denote it is switched off [CHAR LIMIT=50] -->
+    <string name="disabled_by_admin">Disabled by admin</string>
 </resources>

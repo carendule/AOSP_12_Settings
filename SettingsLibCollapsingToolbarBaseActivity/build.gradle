@@ -30,7 +30,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.3.0'
     implementation 'androidx.core:core:1.7.0'
     implementation 'com.google.android.material:material:1.5.0'
-    implementation project(path: ':SettingsLibSettingsTransition')
-    implementation project(path: ':SettingsLibUtils')
-    implementation project(path: ':SettingsLibSettingsTheme')
+    implementation project(':SettingsLibSettingsTransition')
+    implementation project(':SettingsLibUtils')
+    implementation project(':SettingsLibSettingsTheme')
 }

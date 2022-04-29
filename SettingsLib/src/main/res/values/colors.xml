@@ -39,4 +39,9 @@
 
     <color name="dark_mode_icon_color_single_tone">#99000000</color>
     <color name="light_mode_icon_color_single_tone">#ffffff</color>
+
+    <color name="advanced_icon_color">#3C4043</color>
+    <!-- Yellow 600, used for highlighting "important" conversations in settings & notifications -->
+    <color name="important_conversation">#f9ab00</color>
+
 </resources>

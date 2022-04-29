@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="SettingsLib/src/main/res/layout/restricted_icon.xml" value="0.39895833333333336" />
         <entry key="SettingsLibActionButtonsPreference/src/main/res/layout/settingslib_action_buttons.xml" value="0.1" />
         <entry key="SettingsLibAppPreference/src/main/res/layout/preference_app.xml" value="0.39895833333333336" />
         <entry key="SettingsLibBannerMessagePreference/src/main/res/layout/settingslib_banner_message.xml" value="0.1" />
@@ -19,6 +20,7 @@
         <entry key="SettingsLibTopIntroPreference/src/main/res/layout/top_intro_preference.xml" value="0.1" />
         <entry key="SettingsLibTwoTargetPreference/src/main/res/layout/preference_two_target.xml" value="0.1" />
         <entry key="SettingsLibUsageProgressBarPreference/src/main/res/layout/preference_usage_progress_bar.xml" value="0.1" />
+        <entry key="SetupCompat/src/main/res/layout/suc_button.xml" value="0.39895833333333336" />
       </map>
     </option>
   </component>

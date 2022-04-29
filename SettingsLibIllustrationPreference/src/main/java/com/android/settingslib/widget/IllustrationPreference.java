@@ -31,16 +31,16 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import androidx.annotation.RawRes;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceViewHolder;
-import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
-
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieDrawable;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+
+import androidx.annotation.RawRes;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceViewHolder;
+import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
 
 /**
  * IllustrationPreference is a preference that can play lottie format animation
@@ -320,8 +320,8 @@ public class IllustrationPreference extends Preference {
         mIsAutoScale = false;
         if (attrs != null) {
             final TypedArray a = context.obtainStyledAttributes(attrs,
-                    R.styleable.LottieAnimationView, 0 /*defStyleAttr*/, 0 /*defStyleRes*/);
-            mImageResId = a.getResourceId(R.styleable.LottieAnimationView_lottie_rawRes, 0);
+                    com.airbnb.lottie.R.styleable.LottieAnimationView, 0 /*defStyleAttr*/, 0 /*defStyleRes*/);
+            mImageResId = a.getResourceId(com.airbnb.lottie.R.styleable.LottieAnimationView_lottie_rawRes, 0);
             a.recycle();
         }
     }

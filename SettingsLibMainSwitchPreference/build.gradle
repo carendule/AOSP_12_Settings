@@ -27,6 +27,6 @@ android {
 
 dependencies {
     implementation 'androidx.preference:preference:1.2.0'
-    implementation project(path:":SettingsLibSettingsTheme")
-    implementation project(path:":SettingsLibUtils")
+    implementation project(":SettingsLibSettingsTheme")
+    implementation project(":SettingsLibUtils")
 }

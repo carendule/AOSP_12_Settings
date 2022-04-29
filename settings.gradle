@@ -3,6 +3,9 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven {
+            url "https://jitpack.io"
+        }
     }
 }
 dependencyResolutionManagement {
@@ -10,6 +13,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url "https://jitpack.io"
+        }
     }
 }
 rootProject.name = "Settings"
@@ -40,7 +46,10 @@ include ':SettingsLibUsageProgressBarPreference'
 include ':SettingsLibCollapsingToolbarBaseActivity'
 include ':SettingsLibTwoTargetPreference'
 include ':SettingsLibSettingsTransition'
-include ':lottie'
-include ':iconloader'
 include ':WifiTrackerLib'
 include ':SettingsLibSettingsTheme'
+include ':SettingsLibTile'
+include ':lottie'
+include ':SetupCompat'
+include ':SetupDesign'
+include ':SetupStrings'

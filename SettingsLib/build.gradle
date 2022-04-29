@@ -27,9 +27,47 @@ android {
 
 dependencies {
 
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.preference:preference:1.2.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime:2.4.1'
+    implementation 'androidx.mediarouter:mediarouter:1.3.0'
+
+    compileOnly files('../libs/iconloader.jar')
+    compileOnly files('../libs/framework.jar')
+    compileOnly files('../libs/core-icu4j.jar')
+    compileOnly files('../libs/core-all.jar')
+
+    implementation project(":SettingsLibSettingsTheme")
+    implementation project(":SettingsLibRestrictedLockUtils")
+    implementation project(":SettingsLibHelpUtils")
+    implementation project(":SettingsLibActionBarShadow")
+    implementation project(":SettingsLibActionButtonsPreference")
+    implementation project(":SettingsLibAdaptiveIcon")
+    implementation project(":SettingsLibAppPreference")
+    implementation project(":SettingsLibBarChartPreference")
+    implementation project(":SettingsLibBannerMessagePreference")
+    implementation project(":SettingsLibCollapsingToolbarBaseActivity")
+    implementation project(":SettingsLibDisplayDensityUtils")
+    implementation project(":SettingsLibEmergencyNumber")
+    implementation project(":SettingsLibEntityHeaderWidgets")
+    implementation project(":SettingsLibFooterPreference")
+    implementation project(":SettingsLibHelpUtils")
+    implementation project(":SettingsLibIllustrationPreference")
+    implementation project(":SettingsLibLayoutPreference")
+    implementation project(":SettingsLibMainSwitchPreference")
+    implementation project(":SettingsLibProgressBar")
+    implementation project(":SettingsLibRadioButtonPreference")
+    implementation project(":SettingsLibSearchWidget")
+    implementation project(":SettingsLibSettingsSpinner")
+    implementation project(":SettingsLibSettingsTransition")
+    implementation project(":SettingsLibTile")
+    implementation project(":SettingsLibTopIntroPreference")
+    implementation project(":SettingsLibTwoTargetPreference")
+    implementation project(":SettingsLibUsageProgressBarPreference")
+    implementation project(":SettingsLibUtils")
+    implementation project(":WifiTrackerLib")
+
 }

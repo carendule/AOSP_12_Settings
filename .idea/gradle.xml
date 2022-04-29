@@ -33,13 +33,16 @@
             <option value="$PROJECT_DIR$/SettingsLibSettingsSpinner" />
             <option value="$PROJECT_DIR$/SettingsLibSettingsTheme" />
             <option value="$PROJECT_DIR$/SettingsLibSettingsTransition" />
+            <option value="$PROJECT_DIR$/SettingsLibTile" />
             <option value="$PROJECT_DIR$/SettingsLibTopIntroPreference" />
             <option value="$PROJECT_DIR$/SettingsLibTwoTargetPreference" />
             <option value="$PROJECT_DIR$/SettingsLibUsageProgressBarPreference" />
             <option value="$PROJECT_DIR$/SettingsLibUtils" />
+            <option value="$PROJECT_DIR$/SetupCompat" />
+            <option value="$PROJECT_DIR$/SetupDesign" />
+            <option value="$PROJECT_DIR$/SetupStrings" />
             <option value="$PROJECT_DIR$/WifiTrackerLib" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/iconloader" />
             <option value="$PROJECT_DIR$/lottie" />
           </set>
         </option>
