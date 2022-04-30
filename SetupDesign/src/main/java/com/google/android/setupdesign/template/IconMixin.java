@@ -36,7 +36,7 @@ import com.google.android.setupdesign.util.HeaderAreaStyler;
 import com.google.android.setupdesign.util.PartnerStyleHelper;
 
 /**
- * A {@link com.google.android.setupcompat.template.Mixin} for setting an icon on the template
+ * A {@link Mixin} for setting an icon on the template
  * layout.
  */
 public class IconMixin implements Mixin {
@@ -47,7 +47,7 @@ public class IconMixin implements Mixin {
   private final ImageView.ScaleType originalScaleType;
   private final Context context;
   /**
-   * A {@link com.google.android.setupcompat.template.Mixin} for setting and getting the Icon.
+   * A {@link Mixin} for setting and getting the Icon.
    *
    * @param layout The template layout that this Mixin is a part of
    * @param attrs XML attributes given to the layout

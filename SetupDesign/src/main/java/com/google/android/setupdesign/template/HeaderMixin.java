@@ -29,7 +29,10 @@ import android.view.ViewParent;
 import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+import androidx.annotation.AttrRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
 import com.google.android.setupcompat.internal.TemplateLayout;
 import com.google.android.setupcompat.partnerconfig.PartnerConfig;
 import com.google.android.setupcompat.partnerconfig.PartnerConfigHelper;
@@ -39,13 +42,8 @@ import com.google.android.setupdesign.util.HeaderAreaStyler;
 import com.google.android.setupdesign.util.LayoutStyler;
 import com.google.android.setupdesign.util.PartnerStyleHelper;
 
-import androidx.annotation.AttrRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.VisibleForTesting;
-
 /**
- * A {@link com.google.android.setupcompat.template.Mixin} for setting and getting the header text.
+ * A {@link Mixin} for setting and getting the header text.
  */
 public class HeaderMixin implements Mixin {
 
@@ -58,7 +56,7 @@ public class HeaderMixin implements Mixin {
   private static final int AUTO_SIZE_DEFAULT_MAX_LINES = 6;
 
   /**
-   * A {@link com.google.android.setupcompat.template.Mixin} for setting and getting the Header.
+   * A {@link Mixin} for setting and getting the Header.
    *
    * @param layout The layout this Mixin belongs to
    * @param attrs XML attributes given to the layout

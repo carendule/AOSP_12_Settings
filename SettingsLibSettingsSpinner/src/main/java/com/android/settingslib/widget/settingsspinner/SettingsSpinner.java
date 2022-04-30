@@ -22,8 +22,8 @@ import android.util.AttributeSet;
 import android.widget.Spinner;
 
 import androidx.annotation.RequiresApi;
-
 import com.android.settingslib.widget.R;
+
 
 /**
  * A {@link Spinner} with settings style.

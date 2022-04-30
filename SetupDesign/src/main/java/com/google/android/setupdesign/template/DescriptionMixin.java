@@ -36,7 +36,7 @@ import com.google.android.setupdesign.util.HeaderAreaStyler;
 import com.google.android.setupdesign.util.PartnerStyleHelper;
 
 /**
- * A {@link com.google.android.setupcompat.template.Mixin} for setting and getting the description
+ * A {@link Mixin} for setting and getting the description
  * text.
  */
 public class DescriptionMixin implements Mixin {
@@ -45,7 +45,7 @@ public class DescriptionMixin implements Mixin {
   private final TemplateLayout templateLayout;
 
   /**
-   * A {@link com.google.android.setupcompat.template.Mixin} for setting and getting the
+   * A {@link Mixin} for setting and getting the
    * description.
    *
    * @param layout The layout this Mixin belongs to

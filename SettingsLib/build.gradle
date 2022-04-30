@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'kotlin-android'
 }
 
 android {
@@ -19,6 +20,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures {
+        buildConfig false
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -40,34 +46,36 @@ dependencies {
     compileOnly files('../libs/core-icu4j.jar')
     compileOnly files('../libs/core-all.jar')
 
-    implementation project(":SettingsLibSettingsTheme")
+    implementation project(":WifiTrackerLib")
+
+    implementation project(":SettingsLibHelpUtils")
     implementation project(":SettingsLibRestrictedLockUtils")
-    implementation project(":SettingsLibHelpUtils")
     implementation project(":SettingsLibActionBarShadow")
-    implementation project(":SettingsLibActionButtonsPreference")
-    implementation project(":SettingsLibAdaptiveIcon")
     implementation project(":SettingsLibAppPreference")
-    implementation project(":SettingsLibBarChartPreference")
-    implementation project(":SettingsLibBannerMessagePreference")
-    implementation project(":SettingsLibCollapsingToolbarBaseActivity")
-    implementation project(":SettingsLibDisplayDensityUtils")
-    implementation project(":SettingsLibEmergencyNumber")
-    implementation project(":SettingsLibEntityHeaderWidgets")
-    implementation project(":SettingsLibFooterPreference")
-    implementation project(":SettingsLibHelpUtils")
+    implementation project(":SettingsLibSearchWidget")
+    implementation project(":SettingsLibSettingsSpinner")
     implementation project(":SettingsLibIllustrationPreference")
     implementation project(":SettingsLibLayoutPreference")
     implementation project(":SettingsLibMainSwitchPreference")
+    implementation project(":SettingsLibActionButtonsPreference")
+    implementation project(":SettingsLibEntityHeaderWidgets")
+    implementation project(":SettingsLibBarChartPreference")
     implementation project(":SettingsLibProgressBar")
+    implementation project(":SettingsLibAdaptiveIcon")
     implementation project(":SettingsLibRadioButtonPreference")
-    implementation project(":SettingsLibSearchWidget")
-    implementation project(":SettingsLibSettingsSpinner")
-    implementation project(":SettingsLibSettingsTransition")
-    implementation project(":SettingsLibTile")
-    implementation project(":SettingsLibTopIntroPreference")
-    implementation project(":SettingsLibTwoTargetPreference")
-    implementation project(":SettingsLibUsageProgressBarPreference")
+    implementation project(":SettingsLibDisplayDensityUtils")
     implementation project(":SettingsLibUtils")
-    implementation project(":WifiTrackerLib")
+    implementation project(":SettingsLibEmergencyNumber")
+    implementation project(":SettingsLibTopIntroPreference")
+    implementation project(":SettingsLibBannerMessagePreference")
+    implementation project(":SettingsLibFooterPreference")
+    implementation project(":SettingsLibUsageProgressBarPreference")
+    implementation project(":SettingsLibCollapsingToolbarBaseActivity")
+    implementation project(":SettingsLibTwoTargetPreference")
+    implementation project(":SettingsLibSettingsTransition")
+
+    implementation "androidx.core:core-ktx:1.7.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21"
+
 
 }

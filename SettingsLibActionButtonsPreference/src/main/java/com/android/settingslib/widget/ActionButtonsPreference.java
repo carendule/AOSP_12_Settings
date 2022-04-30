@@ -26,15 +26,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.DrawableRes;
-import androidx.annotation.StringRes;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceViewHolder;
-
 import com.android.settingslib.utils.BuildCompatUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceViewHolder;
 
 /**
  * This preference provides a four buttons layout with Settings style.

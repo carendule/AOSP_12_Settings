@@ -3,24 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="SettingsLib/src/main/res/layout/preference_access_point.xml" value="0.15885416666666666" />
         <entry key="SettingsLib/src/main/res/layout/restricted_icon.xml" value="0.39895833333333336" />
         <entry key="SettingsLibActionButtonsPreference/src/main/res/layout/settingslib_action_buttons.xml" value="0.1" />
         <entry key="SettingsLibAppPreference/src/main/res/layout/preference_app.xml" value="0.39895833333333336" />
         <entry key="SettingsLibBannerMessagePreference/src/main/res/layout/settingslib_banner_message.xml" value="0.1" />
         <entry key="SettingsLibBarChartPreference/src/main/res/layout/settings_bar_view.xml" value="0.1" />
+        <entry key="SettingsLibCollapsingToolbarBaseActivity/src/main/res/layout-v31/collapsing_toolbar_base_layout.xml" value="0.39895833333333336" />
         <entry key="SettingsLibCollapsingToolbarBaseActivity/src/main/res/layout/collapsing_toolbar_base_layout.xml" value="0.1" />
         <entry key="SettingsLibEntityHeaderWidgets/src/main/res/layout/app_view.xml" value="0.1" />
         <entry key="SettingsLibFooterPreference/src/main/res/layout/preference_footer.xml" value="0.1" />
         <entry key="SettingsLibIllustrationPreference/src/main/res/layout/illustration_preference.xml" value="0.39895833333333336" />
+        <entry key="SettingsLibLayoutPreference/src/main/res/layout/cross_profiles_settings_entity_header.xml" value="0.15572916666666667" />
         <entry key="SettingsLibLayoutPreference/src/main/res/layout/settings_entity_header.xml" value="0.1" />
         <entry key="SettingsLibMainSwitchPreference/src/main/res/layout/settingslib_main_switch_bar.xml" value="0.1" />
+        <entry key="SettingsLibProgressBar/src/main/res/layout/progress_header.xml" value="0.15885416666666666" />
         <entry key="SettingsLibRadioButtonPreference/src/main/res/layout/preference_radio.xml" value="0.1" />
         <entry key="SettingsLibRestrictedLockUtils/src/main/res/layout/restricted_icon.xml" value="0.1" />
         <entry key="SettingsLibSettingsSpinner/src/main/res/layout/settings_spinner_view.xml" value="0.39895833333333336" />
         <entry key="SettingsLibTopIntroPreference/src/main/res/layout/top_intro_preference.xml" value="0.1" />
+        <entry key="SettingsLibTwoTargetPreference/src/main/res/layout-v31/preference_two_target_divider.xml" value="0.39895833333333336" />
         <entry key="SettingsLibTwoTargetPreference/src/main/res/layout/preference_two_target.xml" value="0.1" />
+        <entry key="SettingsLibTwoTargetPreference/src/main/res/layout/preference_two_target_divider.xml" value="0.39895833333333336" />
         <entry key="SettingsLibUsageProgressBarPreference/src/main/res/layout/preference_usage_progress_bar.xml" value="0.1" />
         <entry key="SetupCompat/src/main/res/layout/suc_button.xml" value="0.39895833333333336" />
+        <entry key="app/src/main/res/drawable/ic_info_outline_24dp.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/usage_view.xml" value="0.15885416666666666" />
       </map>
     </option>
   </component>

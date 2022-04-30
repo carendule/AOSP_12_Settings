@@ -58,7 +58,7 @@ public class DescriptionItem extends Item {
   /**
    * Returns true if the description of partner's layout should apply light style, this depends on
    * if the layout fulfill conditions in {@code shouldApplyPartnerResource} of {@link
-   * com.google.android.setupcompat.PartnerCustomizationLayout}
+   * PartnerCustomizationLayout}
    */
   public boolean shouldApplyPartnerDescriptionLightStyle() {
     return partnerDescriptionLightStyle;

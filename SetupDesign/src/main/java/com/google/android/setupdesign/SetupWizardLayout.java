@@ -418,8 +418,8 @@ public class SetupWizardLayout extends TemplateLayout {
       dest.writeInt(isProgressBarShown ? 1 : 0);
     }
 
-    public static final Parcelable.Creator<SavedState> CREATOR =
-        new Parcelable.Creator<SavedState>() {
+    public static final Creator<SavedState> CREATOR =
+        new Creator<SavedState>() {
 
           @Override
           public SavedState createFromParcel(Parcel parcel) {
