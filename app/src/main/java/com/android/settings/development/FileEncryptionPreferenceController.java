@@ -70,7 +70,7 @@ public class FileEncryptionPreferenceController extends DeveloperOptionsPreferen
 
         mPreference.setEnabled(false);
         mPreference.setSummary(
-                mContext.getResources().getString(R.string.convert_to_file_encryption_done));
+                mContext.getResources().getString(com.android.settingslib.R.string.convert_to_file_encryption_done));
     }
 
     private IStorageManager getStorageManager() {

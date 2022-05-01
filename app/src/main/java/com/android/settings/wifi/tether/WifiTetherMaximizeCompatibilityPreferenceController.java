@@ -38,7 +38,7 @@ public class WifiTetherMaximizeCompatibilityPreferenceController extends
     private boolean mIsChecked;
 
     public WifiTetherMaximizeCompatibilityPreferenceController(Context context,
-            WifiTetherBasePreferenceController.OnTetherConfigUpdateListener listener) {
+            OnTetherConfigUpdateListener listener) {
         super(context, listener);
         mIsChecked = isMaximizeCompatibilityEnabled();
     }

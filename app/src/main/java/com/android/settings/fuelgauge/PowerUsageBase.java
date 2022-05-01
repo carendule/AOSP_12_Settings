@@ -65,7 +65,7 @@ public abstract class PowerUsageBase extends DashboardFragment {
 
         mBatteryBroadcastReceiver = new BatteryBroadcastReceiver(getContext());
         mBatteryBroadcastReceiver.setBatteryChangedListener(type -> {
-            if (type == BatteryBroadcastReceiver.BatteryUpdateType.BATTERY_NOT_PRESENT) {
+            if (type == BatteryUpdateType.BATTERY_NOT_PRESENT) {
                 mIsBatteryPresent = false;
             }
             restartBatteryStatsLoader(type);

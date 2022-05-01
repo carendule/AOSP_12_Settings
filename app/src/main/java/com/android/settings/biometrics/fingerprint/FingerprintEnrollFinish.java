@@ -62,7 +62,7 @@ public class FingerprintEnrollFinish extends BiometricEnrollBase {
                 new FooterButton.Builder(this)
                         .setText(R.string.fingerprint_enroll_button_add)
                         .setButtonType(FooterButton.ButtonType.SKIP)
-                        .setTheme(R.style.SudGlifButton_Secondary)
+                        .setTheme(com.google.android.setupdesign.R.style.SudGlifButton_Secondary)
                         .build()
         );
 
@@ -71,7 +71,7 @@ public class FingerprintEnrollFinish extends BiometricEnrollBase {
                         .setText(R.string.security_settings_fingerprint_enroll_done)
                         .setListener(this::onNextButtonClick)
                         .setButtonType(FooterButton.ButtonType.NEXT)
-                        .setTheme(R.style.SudGlifButton_Primary)
+                        .setTheme(com.google.android.setupdesign.R.style.SudGlifButton_Primary)
                         .build()
         );
     }
@@ -153,7 +153,7 @@ public class FingerprintEnrollFinish extends BiometricEnrollBase {
         intent.putExtra(Intent.EXTRA_USER_ID, mUserId);
         intent.putExtra(BiometricEnrollBase.EXTRA_KEY_CHALLENGE, mChallenge);
         startActivity(intent);
-        overridePendingTransition(R.anim.sud_slide_back_in, R.anim.sud_slide_back_out);
+        overridePendingTransition(com.google.android.setupdesign.R.anim.sud_slide_back_in, com.google.android.setupdesign.R.anim.sud_slide_back_out);
     }
 
     private void onAddAnotherButtonClick(View view) {

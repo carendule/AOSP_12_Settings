@@ -213,12 +213,12 @@ public class ChooseLockPattern extends SettingsActivity {
         /**
          * The patten used during the help screen to show how to draw a pattern.
          */
-        private final List<LockPatternView.Cell> mAnimatePattern =
+        private final List<Cell> mAnimatePattern =
                 Collections.unmodifiableList(Lists.newArrayList(
-                        LockPatternView.Cell.of(0, 0),
-                        LockPatternView.Cell.of(0, 1),
-                        LockPatternView.Cell.of(1, 1),
-                        LockPatternView.Cell.of(2, 1)
+                        Cell.of(0, 0),
+                        Cell.of(0, 1),
+                        Cell.of(1, 1),
+                        Cell.of(2, 1)
                 ));
 
         @Override
@@ -264,7 +264,7 @@ public class ChooseLockPattern extends SettingsActivity {
                     mLockPatternView.removeCallbacks(mClearPatternRunnable);
                 }
 
-                public void onPatternDetected(List<LockPatternView.Cell> pattern) {
+                public void onPatternDetected(List<Cell> pattern) {
                     if (mUiStage == Stage.NeedToConfirm || mUiStage == Stage.ConfirmWrong) {
                         if (mChosenPattern == null) throw new IllegalStateException(
                                 "null chosen pattern in stage 'need to confirm");
@@ -514,7 +514,7 @@ public class ChooseLockPattern extends SettingsActivity {
                             .setText(R.string.lockpattern_tutorial_cancel_label)
                             .setListener(this::onSkipOrClearButtonClick)
                             .setButtonType(FooterButton.ButtonType.OTHER)
-                            .setTheme(R.style.SudGlifButton_Secondary)
+                            .setTheme(com.google.android.setupdesign.R.style.SudGlifButton_Secondary)
                             .build()
             );
             mixin.setPrimaryButton(
@@ -522,7 +522,7 @@ public class ChooseLockPattern extends SettingsActivity {
                             .setText(R.string.lockpattern_tutorial_continue_label)
                             .setListener(this::onNextButtonClick)
                             .setButtonType(FooterButton.ButtonType.NEXT)
-                            .setTheme(R.style.SudGlifButton_Primary)
+                            .setTheme(com.google.android.setupdesign.R.style.SudGlifButton_Primary)
                             .build()
             );
             mSkipOrClearButton = mixin.getSecondaryButton();
@@ -741,7 +741,7 @@ public class ChooseLockPattern extends SettingsActivity {
             if (stage == Stage.ConfirmWrong || stage == Stage.ChoiceTooShort) {
                 TypedValue typedValue = new TypedValue();
                 Theme theme = getActivity().getTheme();
-                theme.resolveAttribute(R.attr.colorError, typedValue, true);
+                theme.resolveAttribute(android.R.attr.colorError, typedValue, true);
                 mHeaderText.setTextColor(typedValue.data);
 
             } else {

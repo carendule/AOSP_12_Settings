@@ -403,7 +403,7 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
         }
 
         private boolean isInternalActivity() {
-            return getActivity() instanceof ConfirmLockPassword.InternalActivity;
+            return getActivity() instanceof InternalActivity;
         }
 
         private void startVerifyPassword(LockscreenCredential credential, final Intent intent,

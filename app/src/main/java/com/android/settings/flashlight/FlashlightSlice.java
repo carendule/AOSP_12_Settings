@@ -148,7 +148,7 @@ public class FlashlightSlice implements CustomSliceable {
     }
 
     private static boolean isFlashlightEnabled(Context context) {
-        return Settings.Secure.getInt(
+        return Secure.getInt(
                 context.getContentResolver(), Secure.FLASHLIGHT_ENABLED, 0) == 1;
     }
 }

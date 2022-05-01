@@ -32,7 +32,7 @@ import com.android.settingslib.core.lifecycle.events.OnStart;
 import com.android.settingslib.core.lifecycle.events.OnStop;
 
 /**
- * Controller to maintain the {@link androidx.preference.Preference} for add
+ * Controller to maintain the {@link Preference} for add
  * device. It monitor Bluetooth's status(on/off) and decide if need
  * to show summary or not.
  */

@@ -301,8 +301,8 @@ public final class ProcStatsEntry implements Parcelable {
         return mUid;
     }
 
-    public static final Parcelable.Creator<ProcStatsEntry> CREATOR
-            = new Parcelable.Creator<ProcStatsEntry>() {
+    public static final Creator<ProcStatsEntry> CREATOR
+            = new Creator<ProcStatsEntry>() {
         public ProcStatsEntry createFromParcel(Parcel in) {
             return new ProcStatsEntry(in);
         }
@@ -346,8 +346,8 @@ public final class ProcStatsEntry implements Parcelable {
             dest.writeLong(mDuration);
         }
 
-        public static final Parcelable.Creator<Service> CREATOR
-                = new Parcelable.Creator<Service>() {
+        public static final Creator<Service> CREATOR
+                = new Creator<Service>() {
             public Service createFromParcel(Parcel in) {
                 return new Service(in);
             }

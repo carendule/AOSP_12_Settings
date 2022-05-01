@@ -39,7 +39,7 @@ import com.android.settings.widget.SeekBarPreference;
  *
  * Will call the appropriate power manager APIs and modify the correct settings to enable
  * users to control their automatic battery saver toggling preferences.
- * See {@link Settings.Global#AUTOMATIC_POWER_SAVE_MODE} for more details.
+ * See {@link Global#AUTOMATIC_POWER_SAVE_MODE} for more details.
  */
 public class BatterySaverScheduleSeekBarController implements
         OnPreferenceChangeListener {
@@ -70,7 +70,7 @@ public class BatterySaverScheduleSeekBarController implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         // The nits are in intervals of 5%
         final int percentage = ((Integer) newValue) * 5;
-        Settings.Global.putInt(mContext.getContentResolver(), Global.LOW_POWER_MODE_TRIGGER_LEVEL,
+        Global.putInt(mContext.getContentResolver(), Global.LOW_POWER_MODE_TRIGGER_LEVEL,
                 percentage);
         final CharSequence stateDescription = formatStateDescription(percentage);
         preference.setTitle(stateDescription);
@@ -81,13 +81,13 @@ public class BatterySaverScheduleSeekBarController implements
     public void updateSeekBar() {
         final ContentResolver resolver = mContext.getContentResolver();
         // Note: this can also be obtained via PowerManager.getPowerSaveModeTrigger()
-        final int mode = Settings.Global.getInt(resolver, Global.AUTOMATIC_POWER_SAVE_MODE,
+        final int mode = Global.getInt(resolver, Global.AUTOMATIC_POWER_SAVE_MODE,
                 PowerManager.POWER_SAVE_MODE_TRIGGER_PERCENTAGE);
         // if mode is "dynamic" we are in routine mode, percentage with non-zero threshold is
         // percentage mode, otherwise it is no schedule mode
         if (mode == PowerManager.POWER_SAVE_MODE_TRIGGER_PERCENTAGE) {
             final int threshold =
-                    Settings.Global.getInt(resolver, Global.LOW_POWER_MODE_TRIGGER_LEVEL, 0);
+                    Global.getInt(resolver, Global.LOW_POWER_MODE_TRIGGER_LEVEL, 0);
             if (threshold <= 0) {
                 mSeekBarPreference.setVisible(false);
             } else {

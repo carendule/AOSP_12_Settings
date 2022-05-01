@@ -69,7 +69,7 @@ public class DomainAppPreferenceController extends BasePreferenceController impl
     @Override
     public boolean handlePreferenceTreeClick(Preference preference) {
         if (preference instanceof DomainAppPreference) {
-            ApplicationsState.AppEntry entry = ((DomainAppPreference) preference).getEntry();
+            AppEntry entry = ((DomainAppPreference) preference).getEntry();
             AppInfoBase.startAppInfoFragment(AppLaunchSettings.class, R.string.auto_launch_label,
                     entry.info.packageName, entry.info.uid, mFragment,
                     INSTALLED_APP_DETAILS, mMetricsCategory);

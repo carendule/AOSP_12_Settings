@@ -81,15 +81,15 @@ public class ZenModePrioritySendersPreferenceController
         mPreferenceCategory = screen.findPreference(getPreferenceKey());
         if (mPreferenceCategory.findPreference(KEY_ANY) == null) {
             makeRadioPreference(KEY_STARRED,
-                    com.android.settings.R.string.zen_mode_from_starred);
+                    R.string.zen_mode_from_starred);
             makeRadioPreference(KEY_CONTACTS,
-                    com.android.settings.R.string.zen_mode_from_contacts);
+                    R.string.zen_mode_from_contacts);
             makeRadioPreference(KEY_ANY,
-                    com.android.settings.R.string.zen_mode_from_anyone);
+                    R.string.zen_mode_from_anyone);
             makeRadioPreference(KEY_NONE,
                     mIsMessages
-                            ? com.android.settings.R.string.zen_mode_none_messages
-                            : com.android.settings.R.string.zen_mode_none_calls);
+                            ? R.string.zen_mode_none_messages
+                            : R.string.zen_mode_none_calls);
             updateSummaries();
         }
 

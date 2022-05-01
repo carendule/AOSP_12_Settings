@@ -306,7 +306,7 @@ public class ManageApplications extends InstrumentedFragment
             screenTitle = R.string.write_settings;
         } else if (className.equals(ManageExternalSourcesActivity.class.getName())) {
             mListType = LIST_TYPE_MANAGE_SOURCES;
-            screenTitle = R.string.install_other_apps;
+            screenTitle = com.android.settingslib.R.string.install_other_apps;
         } else if (className.equals(GamesStorageActivity.class.getName())) {
             mListType = LIST_TYPE_GAMES;
             mSortOrder = R.id.sort_order_size;
@@ -321,7 +321,7 @@ public class ManageApplications extends InstrumentedFragment
             screenTitle = R.string.media_management_apps_title;
         } else if (className.equals(Settings.AlarmsAndRemindersActivity.class.getName())) {
             mListType = LIST_TYPE_ALARMS_AND_REMINDERS;
-            screenTitle = R.string.alarms_and_reminders_title;
+            screenTitle = com.android.settingslib.R.string.alarms_and_reminders_title;
         } else if (className.equals(Settings.NotificationAppListActivity.class.getName())) {
             mListType = LIST_TYPE_NOTIFICATION;
             mUsageStatsManager = IUsageStatsManager.Stub.asInterface(
@@ -616,7 +616,7 @@ public class ManageApplications extends InstrumentedFragment
                 startAppInfoFragment(WriteSettingsDetails.class, R.string.write_system_settings);
                 break;
             case LIST_TYPE_MANAGE_SOURCES:
-                startAppInfoFragment(ExternalSourcesDetails.class, R.string.install_other_apps);
+                startAppInfoFragment(ExternalSourcesDetails.class, com.android.settingslib.R.string.install_other_apps);
                 break;
             case LIST_TYPE_GAMES:
                 startAppInfoFragment(AppStorageSettings.class, R.string.game_storage_settings);
@@ -631,7 +631,7 @@ public class ManageApplications extends InstrumentedFragment
                 break;
             case LIST_TYPE_ALARMS_AND_REMINDERS:
                 startAppInfoFragment(AlarmsAndRemindersDetails.class,
-                        R.string.alarms_and_reminders_label);
+                        com.android.settingslib.R.string.alarms_and_reminders_label);
                 break;
             case LIST_TYPE_MEDIA_MANAGEMENT_APPS:
                 startAppInfoFragment(MediaManagementAppsDetails.class,
@@ -809,7 +809,7 @@ public class ManageApplications extends InstrumentedFragment
             return;
         }
         if (mApplications.getApplicationCount() > position) {
-            ApplicationsState.AppEntry entry = mApplications.getAppEntry(position);
+            AppEntry entry = mApplications.getAppEntry(position);
             mCurrentPkgName = entry.info.packageName;
             mCurrentUid = entry.info.uid;
             startApplicationDetailsActivity();
@@ -1002,8 +1002,8 @@ public class ManageApplications extends InstrumentedFragment
         private final IconDrawableFactory mIconDrawableFactory;
 
         private AppFilterItem mAppFilter;
-        private ArrayList<ApplicationsState.AppEntry> mEntries;
-        private ArrayList<ApplicationsState.AppEntry> mOriginalEntries;
+        private ArrayList<AppEntry> mEntries;
+        private ArrayList<AppEntry> mOriginalEntries;
         private boolean mResumed;
         private int mLastSortMode = -1;
         private int mWhichSize = SIZE_TOTAL;
@@ -1186,7 +1186,7 @@ public class ManageApplications extends InstrumentedFragment
                 }
                 return;
             }
-            ApplicationsState.AppFilter filterObj;
+            AppFilter filterObj;
             Comparator<AppEntry> comparatorObj;
             boolean emulated = Environment.isExternalStorageEmulated();
             if (emulated) {
@@ -1257,11 +1257,11 @@ public class ManageApplications extends InstrumentedFragment
             return info1.packageName.equals(info2.packageName);
         }
 
-        private ArrayList<ApplicationsState.AppEntry> removeDuplicateIgnoringUser(
-                ArrayList<ApplicationsState.AppEntry> entries) {
+        private ArrayList<AppEntry> removeDuplicateIgnoringUser(
+                ArrayList<AppEntry> entries) {
             int size = entries.size();
             // returnList will not have more entries than entries
-            ArrayList<ApplicationsState.AppEntry> returnEntries = new ArrayList<>(size);
+            ArrayList<AppEntry> returnEntries = new ArrayList<>(size);
 
             // assume appinfo of same package but different users are grouped together
             PackageItemInfo lastInfo = null;
@@ -1426,7 +1426,7 @@ public class ManageApplications extends InstrumentedFragment
                     || mManageApplications.mListType != LIST_TYPE_HIGH_POWER) {
                 return true;
             }
-            ApplicationsState.AppEntry entry = mEntries.get(position);
+            AppEntry entry = mEntries.get(position);
 
             return !mBackend.isSysAllowlisted(entry.info.packageName)
                     && !mBackend.isDefaultActiveApp(entry.info.packageName);
@@ -1435,7 +1435,7 @@ public class ManageApplications extends InstrumentedFragment
         @Override
         public void onBindViewHolder(ApplicationViewHolder holder, int position) {
             // Bind the data efficiently with the holder
-            final ApplicationsState.AppEntry entry = mEntries.get(position);
+            final AppEntry entry = mEntries.get(position);
             synchronized (entry) {
                 mState.ensureLabelDescription(entry);
                 holder.setTitle(entry.label, entry.labelDescription);
@@ -1554,12 +1554,12 @@ public class ManageApplications extends InstrumentedFragment
             @WorkerThread
             @Override
             protected FilterResults performFiltering(CharSequence query) {
-                final ArrayList<ApplicationsState.AppEntry> matchedEntries;
+                final ArrayList<AppEntry> matchedEntries;
                 if (TextUtils.isEmpty(query)) {
                     matchedEntries = mOriginalEntries;
                 } else {
                     matchedEntries = new ArrayList<>();
-                    for (ApplicationsState.AppEntry entry : mOriginalEntries) {
+                    for (AppEntry entry : mOriginalEntries) {
                         if (entry.label.toLowerCase().contains(query.toString().toLowerCase())) {
                             matchedEntries.add(entry);
                         }
@@ -1573,7 +1573,7 @@ public class ManageApplications extends InstrumentedFragment
 
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
-                mEntries = (ArrayList<ApplicationsState.AppEntry>) results.values;
+                mEntries = (ArrayList<AppEntry>) results.values;
                 notifyDataSetChanged();
             }
         }

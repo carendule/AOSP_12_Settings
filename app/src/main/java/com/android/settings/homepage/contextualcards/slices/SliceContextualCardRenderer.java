@@ -220,6 +220,6 @@ public class SliceContextualCardRenderer implements ContextualCardRenderer, Life
         if (viewHolder.getItemViewType() == VIEW_TYPE_HALF_WIDTH) {
             return ((SliceHalfCardRendererHelper.HalfCardViewHolder) viewHolder).content;
         }
-        return ((SliceFullCardRendererHelper.SliceViewHolder) viewHolder).sliceView;
+        return ((SliceViewHolder) viewHolder).sliceView;
     }
 }

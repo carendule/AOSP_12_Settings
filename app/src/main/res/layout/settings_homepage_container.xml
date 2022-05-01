@@ -76,10 +76,26 @@
                 android:accessibilityTraversalAfter="@id/homepage_title"
                 android:contentDescription="@string/search_bar_account_avatar_content_description"/>
 
-            <TextView
-                android:id="@+id/homepage_title"
-                android:text="@string/settings_label"
-                style="@style/HomepageTitleText"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                style="@style/HomepageTitleText"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="140dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/kef_logo"
+                    android:tint="@color/settingslib_text_color_primary_device_default"/>
+                <TextView
+                    android:id="@+id/homepage_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="bottom"
+                    android:fontFamily="@string/settingslib_config_headlineFontFamily"
+                    android:textColor="@color/settingslib_text_color_primary_device_default"
+                    android:textSize="26sp"
+                    android:text="@string/settings_label"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
             <FrameLayout
                 android:id="@+id/suggestion_content"

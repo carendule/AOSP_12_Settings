@@ -42,14 +42,14 @@ public class ConvertToFbe extends InstrumentedFragment {
         final ChooseLockSettingsHelper.Builder builder =
                 new ChooseLockSettingsHelper.Builder(getActivity(), this);
         return builder.setRequestCode(request)
-                .setTitle(res.getText(R.string.convert_to_file_encryption))
+                .setTitle(res.getText(com.android.settingslib.R.string.convert_to_file_encryption))
                 .show();
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActivity().setTitle(R.string.convert_to_file_encryption);
+        getActivity().setTitle(com.android.settingslib.R.string.convert_to_file_encryption);
     }
 
     @Override
@@ -85,7 +85,7 @@ public class ConvertToFbe extends InstrumentedFragment {
     private void convert() {
         new SubSettingLauncher(getContext())
                 .setDestination(ConfirmConvertToFbe.class.getName())
-                .setTitleRes(R.string.convert_to_file_encryption)
+                .setTitleRes(com.android.settingslib.R.string.convert_to_file_encryption)
                 .setSourceMetricsCategory(getMetricsCategory())
                 .launch();
     }

@@ -86,7 +86,7 @@ public class BatterySaverController extends BasePreferenceController
     @Override
     public void onStart() {
         mContext.getContentResolver().registerContentObserver(
-                Settings.Global.getUriFor(Settings.Global.LOW_POWER_MODE_TRIGGER_LEVEL),
+                Global.getUriFor(Global.LOW_POWER_MODE_TRIGGER_LEVEL),
                 true /* notifyForDescendants */, mObserver);
 
         mBatteryStateChangeReceiver.setListening(true);
@@ -107,11 +107,11 @@ public class BatterySaverController extends BasePreferenceController
         }
 
         final ContentResolver resolver = mContext.getContentResolver();
-        final int mode = Settings.Global.getInt(resolver,
+        final int mode = Global.getInt(resolver,
                 Global.AUTOMATIC_POWER_SAVE_MODE, PowerManager.POWER_SAVE_MODE_TRIGGER_PERCENTAGE);
         if (mode == PowerManager.POWER_SAVE_MODE_TRIGGER_PERCENTAGE) {
-            final int percent = Settings.Global.getInt(resolver,
-                    Settings.Global.LOW_POWER_MODE_TRIGGER_LEVEL, 0);
+            final int percent = Global.getInt(resolver,
+                    Global.LOW_POWER_MODE_TRIGGER_LEVEL, 0);
             return percent != 0 ?
                     mContext.getString(R.string.battery_saver_off_scheduled_summary,
                             Utils.formatPercentage(percent)) :

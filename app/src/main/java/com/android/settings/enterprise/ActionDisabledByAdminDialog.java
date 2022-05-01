@@ -34,7 +34,7 @@ public class ActionDisabledByAdminDialog extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final RestrictedLockUtils.EnforcedAdmin enforcedAdmin =
+        final EnforcedAdmin enforcedAdmin =
                 getAdminDetailsFromIntent(getIntent());
         final String restriction = getRestrictionFromIntent(getIntent());
         mDialogHelper = new ActionDisabledByAdminDialogHelper(this, restriction);

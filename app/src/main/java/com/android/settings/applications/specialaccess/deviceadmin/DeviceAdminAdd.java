@@ -200,7 +200,7 @@ public class DeviceAdminAdd extends CollapsingToolbarBaseActivity {
         ActivityInfo ai;
         try {
             ai = packageManager.getReceiverInfo(who, PackageManager.GET_META_DATA);
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (NameNotFoundException e) {
             Log.w(TAG, "Unable to retrieve device policy " + who, e);
             finish();
             return;

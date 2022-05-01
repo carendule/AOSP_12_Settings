@@ -63,7 +63,7 @@ public class AppStateWriteSettingsBridge extends AppStateAppOpsBridge {
         return super.getNumPackagesAllowedByAppOps();
     }
 
-    public static class WriteSettingsState extends AppStateAppOpsBridge.PermissionState {
+    public static class WriteSettingsState extends PermissionState {
         public WriteSettingsState(PermissionState permissionState) {
             super(permissionState.packageName, permissionState.userHandle);
             this.packageInfo = permissionState.packageInfo;

@@ -154,7 +154,7 @@ public class TimeZoneInfo {
             final java.util.TimeZone javaTimeZone = java.util.TimeZone.getTimeZone(canonicalZoneId);
             final CharSequence gmtOffset = ZoneGetter.getGmtOffsetText(mTimeZoneFormat, mLocale,
                 javaTimeZone, mNow);
-            return new TimeZoneInfo.Builder(timeZone)
+            return new Builder(timeZone)
                     .setGenericName(timeZoneNames.getDisplayName(canonicalZoneId,
                             TimeZoneNames.NameType.LONG_GENERIC, mNow.getTime()))
                     .setStandardName(timeZoneNames.getDisplayName(canonicalZoneId,

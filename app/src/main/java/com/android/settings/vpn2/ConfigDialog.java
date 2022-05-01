@@ -61,7 +61,7 @@ class ConfigDialog extends AlertDialog implements TextWatcher,
         View.OnClickListener, AdapterView.OnItemSelectedListener,
         CompoundButton.OnCheckedChangeListener {
     private static final String TAG = "ConfigDialog";
-    private final DialogInterface.OnClickListener mListener;
+    private final OnClickListener mListener;
     private final VpnProfile mProfile;
 
     private boolean mEditing;
@@ -94,7 +94,7 @@ class ConfigDialog extends AlertDialog implements TextWatcher,
     private CheckBox mAlwaysOnVpn;
     private TextView mAlwaysOnInvalidReason;
 
-    ConfigDialog(Context context, DialogInterface.OnClickListener listener,
+    ConfigDialog(Context context, OnClickListener listener,
             VpnProfile profile, boolean editing, boolean exists) {
         super(context);
 
@@ -500,7 +500,7 @@ class ConfigDialog extends AlertDialog implements TextWatcher,
                     address = parts[0];
                     prefixLength = Integer.parseInt(parts[1]);
                 }
-                byte[] bytes = InetAddress.parseNumericAddress(address).getAddress();
+                byte[] bytes = android.net.InetAddresses.parseNumericAddress(address).getAddress();
                 int integer = (bytes[3] & 0xFF) | (bytes[2] & 0xFF) << 8 |
                         (bytes[1] & 0xFF) << 16 | (bytes[0] & 0xFF) << 24;
                 if (bytes.length != 4 || prefixLength < 0 || prefixLength > 32 ||

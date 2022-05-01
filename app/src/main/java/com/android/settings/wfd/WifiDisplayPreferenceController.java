@@ -84,7 +84,7 @@ public class WifiDisplayPreferenceController extends BasePreferenceController im
 
         final int routeCount = mRouter.getRouteCount();
         for (int i = 0; i < routeCount; i++) {
-            final MediaRouter.RouteInfo route = mRouter.getRouteAt(i);
+            final RouteInfo route = mRouter.getRouteAt(i);
             if (route.matchesTypes(MediaRouter.ROUTE_TYPE_REMOTE_DISPLAY)
                     && route.isSelected() && !route.isConnecting()) {
                 summary = mContext.getString(R.string.wifi_display_status_connected);

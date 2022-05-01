@@ -46,7 +46,7 @@ public class CustomListPreference extends ListPreference {
     }
 
     protected void onPrepareDialogBuilder(Builder builder,
-            DialogInterface.OnClickListener listener) {
+            OnClickListener listener) {
     }
 
     protected void onDialogClosed(boolean positiveResult) {
@@ -77,7 +77,7 @@ public class CustomListPreference extends ListPreference {
     public static class CustomListPreferenceDialogFragment extends
             ListPreferenceDialogFragmentCompat {
 
-        private static final java.lang.String KEY_CLICKED_ENTRY_INDEX
+        private static final String KEY_CLICKED_ENTRY_INDEX
                 = "settings.CustomListPrefDialog.KEY_CLICKED_ENTRY_INDEX";
 
         private int mClickedDialogEntryIndex;
@@ -102,7 +102,7 @@ public class CustomListPreference extends ListPreference {
                     .findIndexOfValue(getCustomizablePreference().getValue());
             getCustomizablePreference().onPrepareDialogBuilder(builder, getOnItemClickListener());
             if (!getCustomizablePreference().isAutoClosePreference()) {
-                builder.setPositiveButton(R.string.okay, new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(R.string.okay, new OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         onItemChosen();
@@ -134,8 +134,8 @@ public class CustomListPreference extends ListPreference {
             getCustomizablePreference().onDialogStateRestored(getDialog(), savedInstanceState);
         }
 
-        protected DialogInterface.OnClickListener getOnItemClickListener() {
-            return new DialogInterface.OnClickListener() {
+        protected OnClickListener getOnItemClickListener() {
+            return new OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     setClickedDialogEntryIndex(which);

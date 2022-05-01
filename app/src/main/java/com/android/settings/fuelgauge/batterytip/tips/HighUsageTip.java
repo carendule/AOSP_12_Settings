@@ -112,7 +112,7 @@ public class HighUsageTip extends BatteryTip {
         return stringBuilder.toString();
     }
 
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
+    public static final Creator CREATOR = new Creator() {
         public BatteryTip createFromParcel(Parcel in) {
             return new HighUsageTip(in);
         }

@@ -190,7 +190,7 @@ public class DotsPageIndicator extends View implements ViewPager.OnPageChangeLis
 
     /***
      * As this class <b>must</b> act as the {@link ViewPager.OnPageChangeListener} for the ViewPager
-     * (as set by {@link #setViewPager(androidx.viewpager.widget.ViewPager)}).  Applications may set a
+     * (as set by {@link #setViewPager(ViewPager)}).  Applications may set a
      * listener here to be notified of the ViewPager events.
      *
      * @param onPageChangeListener
@@ -728,7 +728,7 @@ public class DotsPageIndicator extends View implements ViewPager.OnPageChangeLis
     }
 
     /**
-     * A {@link android.animation.ValueAnimator} that starts once a given predicate returns true.
+     * A {@link ValueAnimator} that starts once a given predicate returns true.
      */
     public abstract class PendingStartAnimator extends ValueAnimator {
 
@@ -786,7 +786,7 @@ public class DotsPageIndicator extends View implements ViewPager.OnPageChangeLis
                             new RightwardStartPredicate(dotCenterX[was + i]));
                     dotsToHide[i] = was + i;
                 }
-                addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                addUpdateListener(new AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator valueAnimator) {
                         // todo avoid autoboxing
@@ -806,7 +806,7 @@ public class DotsPageIndicator extends View implements ViewPager.OnPageChangeLis
                             new LeftwardStartPredicate(dotCenterX[was - i]));
                     dotsToHide[i] = was - i;
                 }
-                addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                addUpdateListener(new AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator valueAnimator) {
                         // todo avoid autoboxing

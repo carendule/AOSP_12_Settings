@@ -53,7 +53,7 @@ public class RestrictedListPreference extends CustomListPreference {
 
     public RestrictedListPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setWidgetLayoutResource(R.layout.restricted_icon);
+        setWidgetLayoutResource(com.android.settingslib.widget.R.layout.restricted_icon);
         mHelper = new RestrictedPreferenceHelper(context, this, attrs);
     }
 
@@ -216,7 +216,7 @@ public class RestrictedListPreference extends CustomListPreference {
     }
 
     public static class RestrictedListPreferenceDialogFragment extends
-            CustomListPreference.CustomListPreferenceDialogFragment {
+            CustomListPreferenceDialogFragment {
         private int mLastCheckedPosition = AdapterView.INVALID_POSITION;
 
         public static ListPreferenceDialogFragmentCompat newInstance(String key) {

@@ -79,10 +79,10 @@ public class CredentialManagementAppHeaderController extends BasePreferenceContr
 
     private void displayHeader(PreferenceScreen screen) {
         LayoutPreference headerPref = screen.findPreference(getPreferenceKey());
-        ImageView appIconView = headerPref.findViewById(R.id.entity_header_icon);
+        ImageView appIconView = headerPref.findViewById(com.android.settingslib.widget.R.id.entity_header_icon);
         TextView titleView = headerPref.findViewById(R.id.entity_header_title);
         TextView summary1 = headerPref.findViewById(R.id.entity_header_summary);
-        TextView summary2 = headerPref.findViewById(R.id.entity_header_second_summary);
+        TextView summary2 = headerPref.findViewById(com.android.settingslib.widget.R.id.entity_header_second_summary);
         summary2.setVisibility(View.GONE);
 
         try {

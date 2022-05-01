@@ -67,7 +67,7 @@ public class AppStateChangeWifiStateBridge extends AppStateAppOpsBridge {
         return new WifiSettingsState(permissionState);
     }
 
-    public static class WifiSettingsState extends AppStateAppOpsBridge.PermissionState {
+    public static class WifiSettingsState extends PermissionState {
         public WifiSettingsState(PermissionState permissionState) {
             super(permissionState.packageName, permissionState.userHandle);
             this.packageInfo = permissionState.packageInfo;

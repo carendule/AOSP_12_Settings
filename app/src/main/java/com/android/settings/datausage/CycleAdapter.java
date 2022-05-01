@@ -70,7 +70,7 @@ public class CycleAdapter extends SettingsSpinnerAdapter<CycleAdapter.CycleItem>
     @Deprecated
     public boolean updateCycleList(NetworkPolicy policy, ChartData chartData) {
         // stash away currently selected cycle to try restoring below
-        final CycleAdapter.CycleItem previousItem = (CycleAdapter.CycleItem)
+        final CycleItem previousItem = (CycleItem)
                 mSpinner.getSelectedItem();
         clear();
 
@@ -106,7 +106,7 @@ public class CycleAdapter extends SettingsSpinnerAdapter<CycleAdapter.CycleItem>
                 }
 
                 if (includeCycle) {
-                    add(new CycleAdapter.CycleItem(context, cycleStart, cycleEnd));
+                    add(new CycleItem(context, cycleStart, cycleEnd));
                     hasCycles = true;
                 }
             }
@@ -127,7 +127,7 @@ public class CycleAdapter extends SettingsSpinnerAdapter<CycleAdapter.CycleItem>
                 }
 
                 if (includeCycle) {
-                    add(new CycleAdapter.CycleItem(context, cycleStart, cycleEnd));
+                    add(new CycleItem(context, cycleStart, cycleEnd));
                 }
                 cycleEnd = cycleStart;
             }
@@ -140,7 +140,7 @@ public class CycleAdapter extends SettingsSpinnerAdapter<CycleAdapter.CycleItem>
 
             // only force-update cycle when changed; skipping preserves any
             // user-defined inspection region.
-            final CycleAdapter.CycleItem selectedItem = getItem(position);
+            final CycleItem selectedItem = getItem(position);
             if (!Objects.equals(selectedItem, previousItem)) {
                 mListener.onItemSelected(null, null, position, 0);
                 return false;
@@ -155,13 +155,13 @@ public class CycleAdapter extends SettingsSpinnerAdapter<CycleAdapter.CycleItem>
      */
     public boolean updateCycleList(List<? extends NetworkCycleData> cycleData) {
         // stash away currently selected cycle to try restoring below
-        final CycleAdapter.CycleItem previousItem = (CycleAdapter.CycleItem)
+        final CycleItem previousItem = (CycleItem)
                 mSpinner.getSelectedItem();
         clear();
 
         final Context context = getContext();
         for (NetworkCycleData data : cycleData) {
-            add(new CycleAdapter.CycleItem(context, data.getStartTime(), data.getEndTime()));
+            add(new CycleItem(context, data.getStartTime(), data.getEndTime()));
         }
 
         // force pick the current cycle (first item)
@@ -171,7 +171,7 @@ public class CycleAdapter extends SettingsSpinnerAdapter<CycleAdapter.CycleItem>
 
             // only force-update cycle when changed; skipping preserves any
             // user-defined inspection region.
-            final CycleAdapter.CycleItem selectedItem = getItem(position);
+            final CycleItem selectedItem = getItem(position);
             if (!Objects.equals(selectedItem, previousItem)) {
                 mListener.onItemSelected(null, null, position, 0);
                 return false;

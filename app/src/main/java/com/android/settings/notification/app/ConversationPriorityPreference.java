@@ -75,7 +75,7 @@ public class ConversationPriorityPreference extends Preference {
 
     private void init(Context context) {
         mContext = context;
-        setLayoutResource(R.layout.notif_priority_conversation_preference);
+        setLayoutResource(com.android.settings.R.layout.notif_priority_conversation_preference);
     }
 
     public void setImportance(int importance) {
@@ -99,9 +99,9 @@ public class ConversationPriorityPreference extends Preference {
         super.onBindViewHolder(holder);
         holder.itemView.setClickable(false);
 
-        mSilenceButton = holder.findViewById(R.id.silence);
-        mAlertButton = holder.findViewById(R.id.alert);
-        mPriorityButton = holder.findViewById(R.id.priority_group);
+        mSilenceButton = holder.findViewById(com.android.settings.R.id.silence);
+        mAlertButton = holder.findViewById(com.android.settings.R.id.alert);
+        mPriorityButton = holder.findViewById(com.android.settings.R.id.priority_group);
 
         if (!mIsConfigurable) {
             mSilenceButton.setEnabled(false);
@@ -165,17 +165,17 @@ public class ConversationPriorityPreference extends Preference {
         ColorStateList colorAccent = getAccentTint();
         ColorStateList colorNormal = getRegularTint();
 
-        ImageView icon = view.findViewById(R.id.icon);
-        TextView label = view.findViewById(R.id.label);
-        TextView summary = view.findViewById(R.id.summary);
+        ImageView icon = view.findViewById(com.android.settings.R.id.icon);
+        TextView label = view.findViewById(com.android.settings.R.id.label);
+        TextView summary = view.findViewById(com.android.settings.R.id.summary);
 
         icon.setImageTintList(selected ? colorAccent : colorNormal);
         label.setTextColor(selected ? colorAccent : colorNormal);
         summary.setVisibility(selected ? VISIBLE : GONE);
 
         view.setBackground(mContext.getDrawable(selected
-                ? R.drawable.button_border_selected
-                : R.drawable.button_border_unselected));
+                ? com.android.settings.R.drawable.button_border_selected
+                : com.android.settings.R.drawable.button_border_unselected));
         // a11y service won't always read the newly appearing text in the right order if the
         // selection happens too soon (readback happens on a different thread as layout). post
         // the selection to make that conflict less likely

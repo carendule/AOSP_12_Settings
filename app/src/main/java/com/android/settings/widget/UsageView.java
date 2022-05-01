@@ -40,26 +40,26 @@ public class UsageView extends FrameLayout {
 
     public UsageView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        LayoutInflater.from(context).inflate(R.layout.usage_view, this);
-        mUsageGraph = findViewById(R.id.usage_graph);
+        LayoutInflater.from(context).inflate(com.android.settings.R.layout.usage_view, this);
+        mUsageGraph = findViewById(com.android.settings.R.id.usage_graph);
         mLabels = new TextView[] {
-                findViewById(R.id.label_bottom),
-                findViewById(R.id.label_middle),
-                findViewById(R.id.label_top),
+                findViewById(com.android.settings.R.id.label_bottom),
+                findViewById(com.android.settings.R.id.label_middle),
+                findViewById(com.android.settings.R.id.label_top),
         };
         mBottomLabels = new TextView[] {
-                findViewById(R.id.label_start),
-                findViewById(R.id.label_end),
+                findViewById(com.android.settings.R.id.label_start),
+                findViewById(com.android.settings.R.id.label_end),
         };
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.UsageView, 0, 0);
-        if (a.hasValue(R.styleable.UsageView_sideLabels)) {
-            setSideLabels(a.getTextArray(R.styleable.UsageView_sideLabels));
+        TypedArray a = context.obtainStyledAttributes(attrs, com.android.settings.R.styleable.UsageView, 0, 0);
+        if (a.hasValue(com.android.settings.R.styleable.UsageView_sideLabels)) {
+            setSideLabels(a.getTextArray(com.android.settings.R.styleable.UsageView_sideLabels));
         }
-        if (a.hasValue(R.styleable.UsageView_bottomLabels)) {
-            setBottomLabels(a.getTextArray(R.styleable.UsageView_bottomLabels));
+        if (a.hasValue(com.android.settings.R.styleable.UsageView_bottomLabels)) {
+            setBottomLabels(a.getTextArray(com.android.settings.R.styleable.UsageView_bottomLabels));
         }
-        if (a.hasValue(R.styleable.UsageView_textColor)) {
-            int color = a.getColor(R.styleable.UsageView_textColor, 0);
+        if (a.hasValue(com.android.settings.R.styleable.UsageView_textColor)) {
+            int color = a.getColor(com.android.settings.R.styleable.UsageView_textColor, 0);
             for (TextView v : mLabels) {
                 v.setTextColor(color);
             }
@@ -67,34 +67,34 @@ public class UsageView extends FrameLayout {
                 v.setTextColor(color);
             }
         }
-        if (a.hasValue(R.styleable.UsageView_android_gravity)) {
-            int gravity = a.getInt(R.styleable.UsageView_android_gravity, 0);
+        if (a.hasValue(com.android.settings.R.styleable.UsageView_android_gravity)) {
+            int gravity = a.getInt(com.android.settings.R.styleable.UsageView_android_gravity, 0);
             if (gravity == Gravity.END) {
-                LinearLayout layout = findViewById(R.id.graph_label_group);
-                LinearLayout labels = findViewById(R.id.label_group);
+                LinearLayout layout = findViewById(com.android.settings.R.id.graph_label_group);
+                LinearLayout labels = findViewById(com.android.settings.R.id.label_group);
                 // Swap the children order.
                 layout.removeView(labels);
                 layout.addView(labels);
                 // Set gravity.
                 labels.setGravity(Gravity.END);
                 // Swap the bottom space order.
-                LinearLayout bottomLabels = findViewById(R.id.bottom_label_group);
-                View bottomSpace = bottomLabels.findViewById(R.id.bottom_label_space);
+                LinearLayout bottomLabels = findViewById(com.android.settings.R.id.bottom_label_group);
+                View bottomSpace = bottomLabels.findViewById(com.android.settings.R.id.bottom_label_space);
                 bottomLabels.removeView(bottomSpace);
                 bottomLabels.addView(bottomSpace);
             } else if (gravity != Gravity.START) {
                 throw new IllegalArgumentException("Unsupported gravity " + gravity);
             }
         }
-        mUsageGraph.setAccentColor(a.getColor(R.styleable.UsageView_android_colorAccent, 0));
+        mUsageGraph.setAccentColor(a.getColor(com.android.settings.R.styleable.UsageView_android_colorAccent, 0));
         a.recycle();
 
         // Locale Persian & Urdu are RTL languages but request LTR graph direction layout.
         final String defaultLanguageCode = Locale.getDefault().getLanguage();
         if (TextUtils.equals(defaultLanguageCode, new Locale("fa").getLanguage())
                 || TextUtils.equals(defaultLanguageCode, new Locale("ur").getLanguage())) {
-            findViewById(R.id.graph_label_group).setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
-            findViewById(R.id.bottom_label_group).setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+            findViewById(com.android.settings.R.id.graph_label_group).setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+            findViewById(com.android.settings.R.id.bottom_label_group).setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
         }
     }
 
@@ -127,8 +127,8 @@ public class UsageView extends FrameLayout {
     }
 
     public void setSideLabelWeights(float before, float after) {
-        setWeight(R.id.space1, before);
-        setWeight(R.id.space2, after);
+        setWeight(com.android.settings.R.id.space1, before);
+        setWeight(com.android.settings.R.id.space2, after);
     }
 
     private void setWeight(int id, float weight) {

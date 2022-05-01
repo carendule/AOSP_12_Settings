@@ -70,7 +70,7 @@ public class BubblePreference extends Preference implements View.OnClickListener
         mHelper = new RestrictedPreferenceHelper(context, this, attrs);
         mHelper.useAdminDisabledSummary(true);
         mContext = context;
-        setLayoutResource(R.layout.bubble_preference);
+        setLayoutResource(com.android.settings.R.layout.bubble_preference);
     }
 
     public void setSelectedPreference(int preference) {
@@ -106,9 +106,9 @@ public class BubblePreference extends Preference implements View.OnClickListener
         }
         holder.itemView.setClickable(false);
 
-        View bubbleAll = holder.findViewById(R.id.bubble_all);
-        ImageView bubbleAllImage = (ImageView) holder.findViewById(R.id.bubble_all_icon);
-        TextView bubbleAllText = (TextView) holder.findViewById(R.id.bubble_all_label);
+        View bubbleAll = holder.findViewById(com.android.settings.R.id.bubble_all);
+        ImageView bubbleAllImage = (ImageView) holder.findViewById(com.android.settings.R.id.bubble_all_icon);
+        TextView bubbleAllText = (TextView) holder.findViewById(com.android.settings.R.id.bubble_all_label);
         mBubbleAllButton = new ButtonViewHolder(bubbleAll, bubbleAllImage, bubbleAllText,
                 BUBBLE_PREFERENCE_ALL);
         mBubbleAllButton.setSelected(mContext, mSelectedPreference == BUBBLE_PREFERENCE_ALL);
@@ -116,9 +116,9 @@ public class BubblePreference extends Preference implements View.OnClickListener
         bubbleAll.setOnClickListener(this);
         bubbleAll.setVisibility(disabledByAdmin ? View.GONE : View.VISIBLE);
 
-        View bubbleSelected = holder.findViewById(R.id.bubble_selected);
-        ImageView bubbleSelectedImage = (ImageView) holder.findViewById(R.id.bubble_selected_icon);
-        TextView bubbleSelectedText = (TextView) holder.findViewById(R.id.bubble_selected_label);
+        View bubbleSelected = holder.findViewById(com.android.settings.R.id.bubble_selected);
+        ImageView bubbleSelectedImage = (ImageView) holder.findViewById(com.android.settings.R.id.bubble_selected_icon);
+        TextView bubbleSelectedText = (TextView) holder.findViewById(com.android.settings.R.id.bubble_selected_label);
         mBubbleSelectedButton = new ButtonViewHolder(bubbleSelected, bubbleSelectedImage,
                 bubbleSelectedText, BUBBLE_PREFERENCE_SELECTED);
         mBubbleSelectedButton.setSelected(mContext,
@@ -128,9 +128,9 @@ public class BubblePreference extends Preference implements View.OnClickListener
         bubbleSelected.setVisibility((!mSelectedVisible || disabledByAdmin)
                 ? View.GONE : View.VISIBLE);
 
-        View bubbleNone = holder.findViewById(R.id.bubble_none);
-        ImageView bubbleNoneImage = (ImageView) holder.findViewById(R.id.bubble_none_icon);
-        TextView bubbleNoneText = (TextView) holder.findViewById(R.id.bubble_none_label);
+        View bubbleNone = holder.findViewById(com.android.settings.R.id.bubble_none);
+        ImageView bubbleNoneImage = (ImageView) holder.findViewById(com.android.settings.R.id.bubble_none_icon);
+        TextView bubbleNoneText = (TextView) holder.findViewById(com.android.settings.R.id.bubble_none_label);
         mBubbleNoneButton = new ButtonViewHolder(bubbleNone, bubbleNoneImage, bubbleNoneText,
                 BUBBLE_PREFERENCE_NONE);
         mBubbleNoneButton.setSelected(mContext, mSelectedPreference == BUBBLE_PREFERENCE_NONE);
@@ -164,8 +164,8 @@ public class BubblePreference extends Preference implements View.OnClickListener
 
         void setSelected(Context context, boolean selected) {
             mView.setBackground(mContext.getDrawable(selected
-                ? R.drawable.button_border_selected
-                : R.drawable.button_border_unselected));
+                ? com.android.settings.R.drawable.button_border_selected
+                : com.android.settings.R.drawable.button_border_unselected));
             mView.setSelected(selected);
 
             ColorStateList stateList = selected

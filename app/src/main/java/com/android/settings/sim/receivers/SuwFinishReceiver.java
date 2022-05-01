@@ -38,7 +38,7 @@ public class SuwFinishReceiver extends BroadcastReceiver {
             return;
         }
 
-        final BroadcastReceiver.PendingResult pendingResult = goAsync();
+        final PendingResult pendingResult = goAsync();
         ThreadUtils.postOnBackgroundThread(
                 () -> {
                     synchronized (mLock) {

@@ -406,7 +406,7 @@ public class DataUsageList extends DataUsageBaseFragment
                 collapseKey = uid;
                 category = AppItem.CATEGORY_APP;
             } else {
-                collapseKey = android.os.Process.SYSTEM_UID;
+                collapseKey = Process.SYSTEM_UID;
                 category = AppItem.CATEGORY_APP;
             }
             largest = accumulate(collapseKey, knownItems, bucket, category, items, largest);

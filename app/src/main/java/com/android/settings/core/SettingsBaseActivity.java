@@ -99,14 +99,14 @@ public class SettingsBaseActivity extends FragmentActivity implements CategoryHa
             } else {
                 appliedTheme = ThemeHelper.isSetupWizardDayNightEnabled(this)
                         ? R.style.SubSettings_SetupWizard
-                        : R.style.SudThemeGlifV3_Light;
+                        : com.google.android.setupdesign.R.style.SudThemeGlifV3_Light;
             }
             setTheme(appliedTheme);
         }
 
         if (isToolbarEnabled() && !isAnySetupWizard) {
-            super.setContentView(R.layout.collapsing_toolbar_base_layout);
-            mCollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
+            super.setContentView(com.android.settingslib.collapsingtoolbar.R.layout.collapsing_toolbar_base_layout);
+            mCollapsingToolbarLayout = findViewById(com.android.settingslib.collapsingtoolbar.R.id.collapsing_toolbar);
             mAppBarLayout = findViewById(R.id.app_bar);
             if (mCollapsingToolbarLayout != null) {
                 mCollapsingToolbarLayout.setLineSpacingMultiplier(TOOLBAR_LINE_SPACING_MULTIPLIER);
@@ -130,7 +130,7 @@ public class SettingsBaseActivity extends FragmentActivity implements CategoryHa
     }
 
     @Override
-    public void setActionBar(@androidx.annotation.Nullable Toolbar toolbar) {
+    public void setActionBar(@Nullable Toolbar toolbar) {
         super.setActionBar(toolbar);
 
         mToolbar = toolbar;
@@ -146,13 +146,13 @@ public class SettingsBaseActivity extends FragmentActivity implements CategoryHa
 
     @Override
     public void startActivityForResult(Intent intent, int requestCode,
-            @androidx.annotation.Nullable Bundle options) {
+            @Nullable Bundle options) {
         final int transitionType = getTransitionType(intent);
         super.startActivityForResult(intent, requestCode, options);
         if (transitionType == TransitionType.TRANSITION_SLIDE) {
-            overridePendingTransition(R.anim.sud_slide_next_in, R.anim.sud_slide_next_out);
+            overridePendingTransition(com.google.android.setupdesign.R.anim.sud_slide_next_in, com.google.android.setupdesign.R.anim.sud_slide_next_out);
         } else if (transitionType == TransitionType.TRANSITION_FADE) {
-            overridePendingTransition(android.R.anim.fade_in, R.anim.sud_stay);
+            overridePendingTransition(android.R.anim.fade_in, com.google.android.setupdesign.R.anim.sud_stay);
         }
     }
 
@@ -160,7 +160,7 @@ public class SettingsBaseActivity extends FragmentActivity implements CategoryHa
     protected void onPause() {
         // For accessibility activities launched from setup wizard.
         if (getTransitionType(getIntent()) == TransitionType.TRANSITION_FADE) {
-            overridePendingTransition(R.anim.sud_stay, android.R.anim.fade_out);
+            overridePendingTransition(com.google.android.setupdesign.R.anim.sud_stay, android.R.anim.fade_out);
         }
         super.onPause();
     }

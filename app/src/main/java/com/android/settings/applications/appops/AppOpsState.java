@@ -509,7 +509,7 @@ public class AppOpsState {
                     appInfo = mPm.getApplicationInfo(packageName,
                             PackageManager.MATCH_DISABLED_COMPONENTS
                             | PackageManager.MATCH_ANY_USER);
-                } catch (PackageManager.NameNotFoundException e) {
+                } catch (NameNotFoundException e) {
                     Log.w(TAG, "Unable to find info for package " + packageName);
                     return null;
                 }

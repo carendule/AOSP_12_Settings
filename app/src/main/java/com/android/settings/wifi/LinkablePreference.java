@@ -43,13 +43,13 @@ public class LinkablePreference extends Preference {
 
     public LinkablePreference(Context ctx, AttributeSet attrs, int defStyle) {
         super(ctx, attrs, defStyle);
-        setIcon(R.drawable.ic_info_outline_24dp);
+        setIcon(com.android.settings.R.drawable.ic_info_outline_24dp);
         setSelectable(false);
     }
 
     public LinkablePreference(Context ctx, AttributeSet attrs) {
         this(ctx, attrs, TypedArrayUtils.getAttr(
-                ctx, R.attr.footerPreferenceStyle, android.R.attr.preferenceStyle));
+                ctx, com.android.settingslib.widget.R.attr.footerPreferenceStyle, android.R.attr.preferenceStyle));
     }
 
     public LinkablePreference(Context ctx) {

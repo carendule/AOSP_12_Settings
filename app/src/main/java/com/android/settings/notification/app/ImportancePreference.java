@@ -79,9 +79,9 @@ public class ImportancePreference extends Preference {
 
     private void init(Context context) {
         mContext = context;
-        selectedBackground = mContext.getDrawable(R.drawable.button_border_selected);
-        unselectedBackground = mContext.getDrawable(R.drawable.button_border_unselected);
-        setLayoutResource(R.layout.notif_importance_preference);
+        selectedBackground = mContext.getDrawable(com.android.settings.R.drawable.button_border_selected);
+        unselectedBackground = mContext.getDrawable(com.android.settings.R.drawable.button_border_unselected);
+        setLayoutResource(com.android.settings.R.layout.notif_importance_preference);
     }
 
     public void setImportance(int importance) {
@@ -105,8 +105,8 @@ public class ImportancePreference extends Preference {
         super.onBindViewHolder(holder);
         holder.itemView.setClickable(false);
 
-        mSilenceButton = holder.findViewById(R.id.silence);
-        mAlertButton = holder.findViewById(R.id.alert);
+        mSilenceButton = holder.findViewById(com.android.settings.R.id.silence);
+        mAlertButton = holder.findViewById(com.android.settings.R.id.alert);
 
         if (!mIsConfigurable) {
             mSilenceButton.setEnabled(false);
@@ -173,22 +173,22 @@ public class ImportancePreference extends Preference {
         ColorStateList colorNormal = getRegularTint();
 
         if (importance >= IMPORTANCE_DEFAULT) {
-            parent.findViewById(R.id.silence_summary).setVisibility(GONE);
-            ((ImageView) parent.findViewById(R.id.silence_icon)).setImageTintList(colorNormal);
-            ((TextView) parent.findViewById(R.id.silence_label)).setTextColor(colorNormal);
+            parent.findViewById(com.android.settings.R.id.silence_summary).setVisibility(GONE);
+            ((ImageView) parent.findViewById(com.android.settings.R.id.silence_icon)).setImageTintList(colorNormal);
+            ((TextView) parent.findViewById(com.android.settings.R.id.silence_label)).setTextColor(colorNormal);
 
-            ((ImageView) parent.findViewById(R.id.alert_icon)).setImageTintList(colorAccent);
-            ((TextView) parent.findViewById(R.id.alert_label)).setTextColor(colorAccent);
+            ((ImageView) parent.findViewById(com.android.settings.R.id.alert_icon)).setImageTintList(colorAccent);
+            ((TextView) parent.findViewById(com.android.settings.R.id.alert_label)).setTextColor(colorAccent);
 
-            parent.findViewById(R.id.alert_summary).setVisibility(VISIBLE);
+            parent.findViewById(com.android.settings.R.id.alert_summary).setVisibility(VISIBLE);
         } else {
-            parent.findViewById(R.id.alert_summary).setVisibility(GONE);
-            ((ImageView) parent.findViewById(R.id.alert_icon)).setImageTintList(colorNormal);
-            ((TextView) parent.findViewById(R.id.alert_label)).setTextColor(colorNormal);
+            parent.findViewById(com.android.settings.R.id.alert_summary).setVisibility(GONE);
+            ((ImageView) parent.findViewById(com.android.settings.R.id.alert_icon)).setImageTintList(colorNormal);
+            ((TextView) parent.findViewById(com.android.settings.R.id.alert_label)).setTextColor(colorNormal);
 
-            ((ImageView) parent.findViewById(R.id.silence_icon)).setImageTintList(colorAccent);
-            ((TextView) parent.findViewById(R.id.silence_label)).setTextColor(colorAccent);
-            parent.findViewById(R.id.silence_summary).setVisibility(VISIBLE);
+            ((ImageView) parent.findViewById(com.android.settings.R.id.silence_icon)).setImageTintList(colorAccent);
+            ((TextView) parent.findViewById(com.android.settings.R.id.silence_label)).setTextColor(colorAccent);
+            parent.findViewById(com.android.settings.R.id.silence_summary).setVisibility(VISIBLE);
         }
     }
 }

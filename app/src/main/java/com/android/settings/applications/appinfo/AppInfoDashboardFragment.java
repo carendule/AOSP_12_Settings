@@ -105,7 +105,7 @@ public class AppInfoDashboardFragment extends DashboardFragment
 
     private ApplicationsState mState;
     private ApplicationsState.Session mSession;
-    private ApplicationsState.AppEntry mAppEntry;
+    private AppEntry mAppEntry;
     private PackageInfo mPackageInfo;
     private int mUserId;
     private String mPackageName;
@@ -315,11 +315,11 @@ public class AppInfoDashboardFragment extends DashboardFragment
         }
     }
 
-    ApplicationsState.AppEntry getAppEntry() {
+    AppEntry getAppEntry() {
         return mAppEntry;
     }
 
-    void setAppEntry(ApplicationsState.AppEntry appEntry) {
+    void setAppEntry(AppEntry appEntry) {
         mAppEntry = appEntry;
     }
 

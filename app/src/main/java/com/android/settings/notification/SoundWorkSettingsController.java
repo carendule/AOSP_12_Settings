@@ -206,7 +206,7 @@ public class SoundWorkSettingsController extends AbstractPreferenceController
             mWorkUsePersonalSounds = mScreen.findPreference(KEY_WORK_USE_PERSONAL_SOUNDS);
             mWorkUsePersonalSounds.setOnPreferenceChangeListener((Preference p, Object value) -> {
                 if ((boolean) value) {
-                    SoundWorkSettingsController.UnifyWorkDialogFragment.show(mParent);
+                    UnifyWorkDialogFragment.show(mParent);
                     return false;
                 } else {
                     disableWorkSync();
@@ -342,7 +342,7 @@ public class SoundWorkSettingsController extends AbstractPreferenceController
                     .setTitle(R.string.work_sync_dialog_title)
                     .setMessage(R.string.work_sync_dialog_message)
                     .setPositiveButton(R.string.work_sync_dialog_yes,
-                            SoundWorkSettingsController.UnifyWorkDialogFragment.this)
+                            UnifyWorkDialogFragment.this)
                     .setNegativeButton(android.R.string.no, /* listener= */ null)
                     .create();
         }

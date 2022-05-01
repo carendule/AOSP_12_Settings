@@ -524,8 +524,8 @@ public class UserCredentialsSettings extends SettingsPreferenceFragment
             return 0;
         }
 
-        public static final Parcelable.Creator<Credential> CREATOR
-                = new Parcelable.Creator<Credential>() {
+        public static final Creator<Credential> CREATOR
+                = new Creator<Credential>() {
             public Credential createFromParcel(Parcel in) {
                 return new Credential(in);
             }

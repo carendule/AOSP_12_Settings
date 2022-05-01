@@ -70,7 +70,7 @@ abstract class ZenCustomRuleSettingsBase extends ZenModeSettingsBase {
             Preference prefCategory = screen.findPreference(categoryKey);
             if (prefCategory != null) {
                 prefCategory.setTitle(mContext.getResources().getString(
-                        com.android.settings.R.string.zen_mode_custom_behavior_category_title,
+                        R.string.zen_mode_custom_behavior_category_title,
                         mRule.getName()));
             }
         }

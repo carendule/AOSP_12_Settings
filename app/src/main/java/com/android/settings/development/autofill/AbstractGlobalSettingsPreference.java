@@ -27,7 +27,7 @@ import com.android.settingslib.CustomEditTextPreferenceCompat;
 
 /**
  * Base class for Autofill integer properties that are backed by
- * {@link android.provider.Settings.Global}.
+ * {@link Settings.Global}.
  */
 abstract class AbstractGlobalSettingsPreference extends CustomEditTextPreferenceCompat {
 

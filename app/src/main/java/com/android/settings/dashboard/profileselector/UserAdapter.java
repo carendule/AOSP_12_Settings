@@ -134,7 +134,7 @@ public class UserAdapter implements SpinnerAdapter, ListAdapter {
     }
 
     @Override
-    public UserAdapter.UserDetails getItem(int position) {
+    public UserDetails getItem(int position) {
         return data.get(position);
     }
 

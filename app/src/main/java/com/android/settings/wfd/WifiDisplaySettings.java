@@ -271,7 +271,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment implem
         // Add all known remote display routes.
         final int routeCount = mRouter.getRouteCount();
         for (int i = 0; i < routeCount; i++) {
-            MediaRouter.RouteInfo route = mRouter.getRouteAt(i);
+            RouteInfo route = mRouter.getRouteAt(i);
             if (route.matchesTypes(MediaRouter.ROUTE_TYPE_REMOTE_DISPLAY)) {
                 preferenceScreen.addPreference(createRoutePreference(route));
             }
@@ -301,7 +301,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment implem
         }
     }
 
-    private RoutePreference createRoutePreference(MediaRouter.RouteInfo route) {
+    private RoutePreference createRoutePreference(RouteInfo route) {
         WifiDisplay display = findWifiDisplay(route.getDeviceAddress());
         if (display != null) {
             return new WifiDisplayRoutePreference(getPrefContext(), route, display);
@@ -562,7 +562,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment implem
                 });
     }
 
-    private void toggleRoute(MediaRouter.RouteInfo route) {
+    private void toggleRoute(RouteInfo route) {
         if (route.isSelected()) {
             MediaRouteDialogPresenter.showDialogFragment(getActivity(),
                     MediaRouter.ROUTE_TYPE_REMOTE_DISPLAY, null);
@@ -664,9 +664,9 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment implem
 
     private class RoutePreference extends TwoTargetPreference
             implements Preference.OnPreferenceClickListener {
-        private final MediaRouter.RouteInfo mRoute;
+        private final RouteInfo mRoute;
 
-        public RoutePreference(Context context, MediaRouter.RouteInfo route) {
+        public RoutePreference(Context context, RouteInfo route) {
             super(context);
 
             mRoute = route;
@@ -685,7 +685,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment implem
                     setOrder(ORDER_AVAILABLE);
                 } else {
                     setOrder(ORDER_UNAVAILABLE);
-                    if (route.getStatusCode() == MediaRouter.RouteInfo.STATUS_IN_USE) {
+                    if (route.getStatusCode() == RouteInfo.STATUS_IN_USE) {
                         setSummary(R.string.wifi_display_status_in_use);
                     } else {
                         setSummary(R.string.wifi_display_status_not_available);
@@ -703,7 +703,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment implem
     }
 
     private class WifiDisplayRoutePreference extends RoutePreference
-            implements View.OnClickListener {
+            implements OnClickListener {
         private final WifiDisplay mDisplay;
 
         @Override
@@ -711,7 +711,7 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment implem
             return R.layout.preference_widget_gear;
         }
 
-        public WifiDisplayRoutePreference(Context context, MediaRouter.RouteInfo route,
+        public WifiDisplayRoutePreference(Context context, RouteInfo route,
                 WifiDisplay display) {
             super(context, route);
             mDisplay = display;

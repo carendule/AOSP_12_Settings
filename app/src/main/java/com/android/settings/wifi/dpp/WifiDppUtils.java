@@ -496,20 +496,20 @@ public class WifiDppUtils {
 
     @WifiEntry.Security
     static int getSecurityTypeFromWifiConfiguration(WifiConfiguration config) {
-        if (config.allowedKeyManagement.get(WifiConfiguration.KeyMgmt.SAE)) {
+        if (config.allowedKeyManagement.get(KeyMgmt.SAE)) {
             return WifiEntry.SECURITY_SAE;
         }
-        if (config.allowedKeyManagement.get(WifiConfiguration.KeyMgmt.WPA_PSK)) {
+        if (config.allowedKeyManagement.get(KeyMgmt.WPA_PSK)) {
             return WifiEntry.SECURITY_PSK;
         }
-        if (config.allowedKeyManagement.get(WifiConfiguration.KeyMgmt.SUITE_B_192)) {
+        if (config.allowedKeyManagement.get(KeyMgmt.SUITE_B_192)) {
             return WifiEntry.SECURITY_EAP_SUITE_B;
         }
-        if (config.allowedKeyManagement.get(WifiConfiguration.KeyMgmt.WPA_EAP)
-                || config.allowedKeyManagement.get(WifiConfiguration.KeyMgmt.IEEE8021X)) {
+        if (config.allowedKeyManagement.get(KeyMgmt.WPA_EAP)
+                || config.allowedKeyManagement.get(KeyMgmt.IEEE8021X)) {
             return WifiEntry.SECURITY_EAP;
         }
-        if (config.allowedKeyManagement.get(WifiConfiguration.KeyMgmt.OWE)) {
+        if (config.allowedKeyManagement.get(KeyMgmt.OWE)) {
             return WifiEntry.SECURITY_OWE;
         }
         return (config.wepKeys[0] != null) ? WifiEntry.SECURITY_WEP : WifiEntry.SECURITY_NONE;

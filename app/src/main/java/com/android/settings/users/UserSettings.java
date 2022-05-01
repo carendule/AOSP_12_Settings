@@ -802,9 +802,9 @@ public class UserSettings extends SettingsPreferenceFragment
             mAddingUser = true;
             mAddingUserName = userType == USER_TYPE_USER
                     ? (mPendingUserName != null ? mPendingUserName.toString()
-                    : getString(R.string.user_new_user_name))
+                    : getString(com.android.settingslib.R.string.user_new_user_name))
                     : (mPendingUserName != null ? mPendingUserName.toString()
-                            : getString(R.string.user_new_profile_name));
+                            : getString(com.android.settingslib.R.string.user_new_profile_name));
         }
 
         mUserCreatingDialog = new UserCreatingDialog(getActivity());
@@ -1069,7 +1069,7 @@ public class UserSettings extends SettingsPreferenceFragment
             mAddGuest.setSelectable(true);
             if (mGuestUserAutoCreated && mGuestCreationScheduled.get()) {
                 mAddGuest.setTitle(com.android.settingslib.R.string.user_guest);
-                mAddGuest.setSummary(R.string.guest_resetting);
+                mAddGuest.setSummary(com.android.settingslib.R.string.guest_resetting);
                 mAddGuest.setEnabled(false);
             } else {
                 mAddGuest.setTitle(com.android.settingslib.R.string.guest_new_guest);

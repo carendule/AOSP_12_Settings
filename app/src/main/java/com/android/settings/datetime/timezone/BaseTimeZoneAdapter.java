@@ -184,7 +184,7 @@ public class BaseTimeZoneAdapter<T extends BaseTimeZoneAdapter.AdapterItem>
     }
 
     @VisibleForTesting
-    public static class ItemViewHolder<T extends BaseTimeZoneAdapter.AdapterItem>
+    public static class ItemViewHolder<T extends AdapterItem>
             extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         final OnListItemClickListener<T> mOnListItemClickListener;

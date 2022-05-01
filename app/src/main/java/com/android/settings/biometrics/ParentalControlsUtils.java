@@ -41,7 +41,7 @@ public class ParentalControlsUtils {
 
     /**
      * Public version that enables test paths, see
-     * {@link android.hardware.biometrics.ParentalControlsUtilsInternal#isTestModeEnabled(Context)}
+     * {@link ParentalControlsUtilsInternal#isTestModeEnabled(Context)}
      * @return non-null EnforcedAdmin if parental consent is required
      */
     public static RestrictedLockUtils.EnforcedAdmin parentConsentRequired(@NonNull Context context,

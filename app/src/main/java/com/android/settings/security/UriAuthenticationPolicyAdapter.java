@@ -63,7 +63,7 @@ public class UriAuthenticationPolicyAdapter extends
     }
 
     @Override
-    public UriAuthenticationPolicyAdapter.UriViewHolder onCreateViewHolder(ViewGroup parent,
+    public UriViewHolder onCreateViewHolder(ViewGroup parent,
             int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(
                 R.layout.app_authentication_uri_item, parent, false);
@@ -71,8 +71,8 @@ public class UriAuthenticationPolicyAdapter extends
     }
 
     @Override
-    public void onBindViewHolder(UriAuthenticationPolicyAdapter.UriViewHolder holder,
-            int position) {
+    public void onBindViewHolder(UriViewHolder holder,
+                                 int position) {
         Uri uri = mUris.get(position);
         holder.mUriNameView.setText(Uri.decode(uri.toString()));
     }

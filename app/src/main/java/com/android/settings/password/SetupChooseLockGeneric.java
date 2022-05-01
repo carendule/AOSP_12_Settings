@@ -105,7 +105,7 @@ public class SetupChooseLockGeneric extends ChooseLockGeneric {
             GlifPreferenceLayout layout = (GlifPreferenceLayout) view;
             layout.setDividerItemDecoration(new SettingsDividerItemDecoration(getContext()));
             layout.setDividerInset(getContext().getResources().getDimensionPixelSize(
-                    R.dimen.sud_items_glif_text_divider_inset));
+                    com.google.android.setupdesign.R.dimen.sud_items_glif_text_divider_inset));
 
             layout.setIcon(getContext().getDrawable(R.drawable.ic_lock));
 
@@ -158,7 +158,7 @@ public class SetupChooseLockGeneric extends ChooseLockGeneric {
 
         @Override
         protected Class<? extends ChooseLockGeneric.InternalActivity> getInternalActivityClass() {
-            return SetupChooseLockGeneric.InternalActivity.class;
+            return InternalActivity.class;
         }
 
         @Override

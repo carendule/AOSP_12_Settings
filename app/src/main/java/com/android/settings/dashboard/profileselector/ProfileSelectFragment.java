@@ -97,7 +97,7 @@ public abstract class ProfileSelectFragment extends DashboardFragment {
      */
     public static final int WORK_TAB = 1;
     private static final int[] LABEL = {
-            R.string.category_personal, R.string.category_work
+            com.android.settingslib.R.string.category_personal, com.android.settingslib.R.string.category_work
     };
 
     private ViewGroup mContentView;
@@ -111,7 +111,7 @@ public abstract class ProfileSelectFragment extends DashboardFragment {
 
         final View tabContainer = mContentView.findViewById(R.id.tab_container);
         final ViewPager viewPager = tabContainer.findViewById(R.id.view_pager);
-        viewPager.setAdapter(new ProfileSelectFragment.ViewPagerAdapter(this));
+        viewPager.setAdapter(new ViewPagerAdapter(this));
         final TabLayout tabs = tabContainer.findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
         setupTabTextColor(tabs);
@@ -162,7 +162,7 @@ public abstract class ProfileSelectFragment extends DashboardFragment {
 
     /**
      * Returns an array of {@link Fragment} to display in the
-     * {@link com.google.android.material.tabs.TabLayout}
+     * {@link TabLayout}
      */
     public abstract Fragment[] getFragments();
 

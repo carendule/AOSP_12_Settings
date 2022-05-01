@@ -134,7 +134,7 @@ public class PrivateDnsModeDialogPreference extends CustomDialogPreferenceCompat
     private void initialize() {
         // Add the "Restricted" icon resource so that if the preference is disabled by the
         // admin, an information button will be shown.
-        setWidgetLayoutResource(R.layout.restricted_icon);
+        setWidgetLayoutResource(com.android.settingslib.widget.R.layout.restricted_icon);
     }
 
     @Override
@@ -172,12 +172,12 @@ public class PrivateDnsModeDialogPreference extends CustomDialogPreferenceCompat
 
         // Initial radio button text
         final RadioButton offRadioButton = view.findViewById(R.id.private_dns_mode_off);
-        offRadioButton.setText(R.string.private_dns_mode_off);
+        offRadioButton.setText(com.android.settingslib.R.string.private_dns_mode_off);
         final RadioButton opportunisticRadioButton =
                 view.findViewById(R.id.private_dns_mode_opportunistic);
-        opportunisticRadioButton.setText(R.string.private_dns_mode_opportunistic);
+        opportunisticRadioButton.setText(com.android.settingslib.R.string.private_dns_mode_opportunistic);
         final RadioButton providerRadioButton = view.findViewById(R.id.private_dns_mode_provider);
-        providerRadioButton.setText(R.string.private_dns_mode_provider);
+        providerRadioButton.setText(com.android.settingslib.R.string.private_dns_mode_provider);
 
         final TextView helpTextView = view.findViewById(R.id.private_dns_help_info);
         helpTextView.setMovementMethod(LinkMovementMethod.getInstance());

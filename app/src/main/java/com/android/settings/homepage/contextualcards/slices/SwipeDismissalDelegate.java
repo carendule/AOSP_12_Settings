@@ -34,9 +34,9 @@ public class SwipeDismissalDelegate extends ItemTouchHelper.Callback {
         void onSwiped(int position);
     }
 
-    private final SwipeDismissalDelegate.Listener mListener;
+    private final Listener mListener;
 
-    public SwipeDismissalDelegate(SwipeDismissalDelegate.Listener listener) {
+    public SwipeDismissalDelegate(Listener listener) {
         mListener = listener;
     }
 

@@ -24,7 +24,7 @@ import android.widget.TextView;
 import androidx.preference.PreferenceViewHolder;
 
 /**
- * A custom {@link android.widget.TextView} preference that shows html text with a custom tag
+ * A custom {@link TextView} preference that shows html text with a custom tag
  * filter.
  */
 public final class HtmlTextPreference extends StaticTextPreference {

@@ -24,13 +24,13 @@ public class BatterySaverStickyPreferenceController extends TogglePreferenceCont
 
     @Override
     public boolean isChecked() {
-        return Settings.Global.getInt(mContext.getContentResolver(),
+        return Global.getInt(mContext.getContentResolver(),
             Global.LOW_POWER_MODE_STICKY_AUTO_DISABLE_ENABLED, 1) == 1;
     }
 
     @Override
     public boolean setChecked(boolean isChecked) {
-        Settings.Global.putInt(mContext.getContentResolver(),
+        Global.putInt(mContext.getContentResolver(),
             Global.LOW_POWER_MODE_STICKY_AUTO_DISABLE_ENABLED,
             isChecked ? 1 : 0);
         return true;
@@ -39,7 +39,7 @@ public class BatterySaverStickyPreferenceController extends TogglePreferenceCont
     @Override
     protected void refreshSummary(Preference preference) {
         super.refreshSummary(preference);
-        final int stickyShutoffLevel = Settings.Global.getInt(
+        final int stickyShutoffLevel = Global.getInt(
             mContext.getContentResolver(), Global.LOW_POWER_MODE_STICKY_AUTO_DISABLE_LEVEL, 90);
         preference.setSummary(TextUtils.expandTemplate(
                 mContext.getString(R.string.battery_saver_sticky_description_new),
@@ -48,7 +48,7 @@ public class BatterySaverStickyPreferenceController extends TogglePreferenceCont
 
     @Override
     public void updateState(Preference preference) {
-        int setting = Settings.Global.getInt(mContext.getContentResolver(),
+        int setting = Global.getInt(mContext.getContentResolver(),
             Global.LOW_POWER_MODE_STICKY_AUTO_DISABLE_ENABLED, 1);
 
         ((SwitchPreference) preference).setChecked(setting == 1);

@@ -49,10 +49,10 @@ public class DarkUIInfoDialogFragment extends InstrumentedDialogFragment
         Context context = getContext();
         AlertDialog.Builder dialog = new AlertDialog.Builder(context);
         LayoutInflater inflater = LayoutInflater.from(dialog.getContext());
-        View titleView = inflater.inflate(R.layout.settings_dialog_title, null);
-        ((ImageView) titleView.findViewById(R.id.settings_icon))
+        View titleView = inflater.inflate(com.android.settingslib.R.layout.settings_dialog_title, null);
+        ((ImageView) titleView.findViewById(com.android.settingslib.R.id.settings_icon))
                 .setImageDrawable(context.getDrawable(R.drawable.dark_theme));
-        ((TextView) titleView.findViewById(R.id.settings_title)).setText(R.string.dark_ui_mode);
+        ((TextView) titleView.findViewById(com.android.settingslib.R.id.settings_title)).setText(R.string.dark_ui_mode);
 
         dialog.setCustomTitle(titleView)
                 .setMessage(R.string.dark_ui_settings_dark_summary)

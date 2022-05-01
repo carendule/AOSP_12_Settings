@@ -68,7 +68,7 @@ public abstract class AppInfoBase extends SettingsPreferenceFragment
     protected ApplicationFeatureProvider mApplicationFeatureProvider;
     protected ApplicationsState mState;
     protected ApplicationsState.Session mSession;
-    protected ApplicationsState.AppEntry mAppEntry;
+    protected AppEntry mAppEntry;
     protected PackageInfo mPackageInfo;
     protected int mUserId;
     protected String mPackageName;

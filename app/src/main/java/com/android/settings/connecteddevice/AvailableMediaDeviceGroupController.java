@@ -39,7 +39,7 @@ import com.android.settingslib.core.lifecycle.events.OnStart;
 import com.android.settingslib.core.lifecycle.events.OnStop;
 
 /**
- * Controller to maintain the {@link androidx.preference.PreferenceGroup} for all
+ * Controller to maintain the {@link PreferenceGroup} for all
  * available media devices. It uses {@link DevicePreferenceCallback}
  * to add/remove {@link Preference}
  */

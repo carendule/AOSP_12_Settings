@@ -255,7 +255,7 @@ public class TextToSpeechSettings extends SettingsPreferenceFragment
             // Do set pitch correctly after it may have changed, and unlike speed, it doesn't change
             // immediately.
             final ContentResolver resolver = getContentResolver();
-            mTts.setPitch(android.provider.Settings.Secure.getInt(resolver, TTS_DEFAULT_PITCH,
+            mTts.setPitch(Secure.getInt(resolver, TTS_DEFAULT_PITCH,
                     TextToSpeech.Engine.DEFAULT_PITCH) / 100.0f);
         }
 
@@ -309,10 +309,10 @@ public class TextToSpeechSettings extends SettingsPreferenceFragment
 
         // Set up the default rate and pitch.
         mDefaultRate =
-                android.provider.Settings.Secure.getInt(
+                Secure.getInt(
                         resolver, TTS_DEFAULT_RATE, TextToSpeech.Engine.DEFAULT_RATE);
         mDefaultPitch =
-                android.provider.Settings.Secure.getInt(
+                Secure.getInt(
                         resolver, TTS_DEFAULT_PITCH, TextToSpeech.Engine.DEFAULT_PITCH);
 
         mDefaultRatePref.setProgress(getSeekBarProgressFromValue(KEY_DEFAULT_RATE, mDefaultRate));
@@ -546,7 +546,7 @@ public class TextToSpeechSettings extends SettingsPreferenceFragment
         CharSequence[] entries = new CharSequence[availableLangs.size() + 1];
         CharSequence[] entryValues = new CharSequence[availableLangs.size() + 1];
 
-        entries[0] = getActivity().getString(R.string.tts_lang_use_system);
+        entries[0] = getActivity().getString(com.android.settingslib.R.string.tts_lang_use_system);
         entryValues[0] = "";
 
         int i = 1;
@@ -568,7 +568,7 @@ public class TextToSpeechSettings extends SettingsPreferenceFragment
     private void setLocalePreference(int index) {
         if (index < 0) {
             mLocalePreference.setValue("");
-            mLocalePreference.setSummary(R.string.tts_lang_not_selected);
+            mLocalePreference.setSummary(com.android.settingslib.R.string.tts_lang_not_selected);
         } else {
             mLocalePreference.setValueIndex(index);
             mLocalePreference.setSummary(mLocalePreference.getEntries()[index]);
@@ -581,9 +581,9 @@ public class TextToSpeechSettings extends SettingsPreferenceFragment
             try {
                 final String currentLang = mTts.getLanguage().getISO3Language();
                 String[] strings = getActivity().getResources().getStringArray(
-                        R.array.tts_demo_strings);
+                        com.android.settingslib.R.array.tts_demo_strings);
                 String[] langs = getActivity().getResources().getStringArray(
-                        R.array.tts_demo_string_langs);
+                        com.android.settingslib.R.array.tts_demo_string_langs);
 
                 for (int i = 0; i < strings.length; ++i) {
                     if (langs[i].equals(currentLang)) {
@@ -595,7 +595,7 @@ public class TextToSpeechSettings extends SettingsPreferenceFragment
                 // Ignore and fall back to default sample string
             }
         }
-        return getString(R.string.tts_default_sample_string);
+        return getString(com.android.settingslib.R.string.tts_default_sample_string);
     }
 
     private boolean isNetworkRequiredForSynthesis() {
@@ -744,7 +744,7 @@ public class TextToSpeechSettings extends SettingsPreferenceFragment
     private void displayNetworkAlert() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(android.R.string.dialog_alert_title)
-                .setMessage(getActivity().getString(R.string.tts_engine_network_required))
+                .setMessage(getActivity().getString(com.android.settingslib.R.string.tts_engine_network_required))
                 .setCancelable(false)
                 .setPositiveButton(android.R.string.ok, null);
 
@@ -779,7 +779,7 @@ public class TextToSpeechSettings extends SettingsPreferenceFragment
             return;
         }
 
-        android.provider.Settings.Secure.putString(getContentResolver(), TTS_DEFAULT_SYNTH, engine);
+        Secure.putString(getContentResolver(), TTS_DEFAULT_SYNTH, engine);
 
         mAvailableStrLocals = data.getStringArrayListExtra(
                 TextToSpeech.Engine.EXTRA_AVAILABLE_VOICES);

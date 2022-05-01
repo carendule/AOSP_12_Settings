@@ -38,7 +38,7 @@ public class AppInfo implements Comparable<AppInfo>, Parcelable {
     public final long screenOnTimeMs;
     public final int uid;
 
-    private AppInfo(AppInfo.Builder builder) {
+    private AppInfo(Builder builder) {
         packageName = builder.mPackageName;
         anomalyTypes = builder.mAnomalyTypes;
         screenOnTimeMs = builder.mScreenOnTimeMs;
@@ -93,7 +93,7 @@ public class AppInfo implements Comparable<AppInfo>, Parcelable {
                 && TextUtils.equals(packageName, other.packageName);
     }
 
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
+    public static final Creator CREATOR = new Creator() {
         public AppInfo createFromParcel(Parcel in) {
             return new AppInfo(in);
         }

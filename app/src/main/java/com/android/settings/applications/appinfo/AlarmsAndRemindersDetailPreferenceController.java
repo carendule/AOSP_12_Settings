@@ -27,7 +27,7 @@ import com.android.settings.applications.AppStateAlarmsAndRemindersBridge;
 
 /**
  * Preference controller for
- * {@link com.android.settings.applications.appinfo.AlarmsAndRemindersDetails} Settings fragment.
+ * {@link AlarmsAndRemindersDetails} Settings fragment.
  */
 public class AlarmsAndRemindersDetailPreferenceController extends AppInfoPreferenceControllerBase {
 

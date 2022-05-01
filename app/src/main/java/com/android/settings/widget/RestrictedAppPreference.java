@@ -32,7 +32,7 @@ import com.android.settingslib.widget.AppPreference;
 
 /**
  * {@link AppPreference} that implements user restriction utilities using
- * {@link com.android.settingslib.RestrictedPreferenceHelper}.
+ * {@link RestrictedPreferenceHelper}.
  * Used to show policy transparency on {@link AppPreference}.
  */
 public class RestrictedAppPreference extends AppPreference {
@@ -55,7 +55,7 @@ public class RestrictedAppPreference extends AppPreference {
     }
 
     private void initialize(AttributeSet attrs, String userRestriction) {
-        setWidgetLayoutResource(R.layout.restricted_icon);
+        setWidgetLayoutResource(com.android.settingslib.widget.R.layout.restricted_icon);
         mHelper = new RestrictedPreferenceHelper(getContext(), this, attrs);
         this.userRestriction = userRestriction;
     }

@@ -154,7 +154,7 @@ public class TopLevelBatteryPreferenceController extends BasePreferenceControlle
         } else if (info.remainingLabel == null) {
             return info.batteryPercentString;
         } else {
-            return mContext.getString(R.string.power_remaining_settings_home_page,
+            return mContext.getString(com.android.settingslib.R.string.power_remaining_settings_home_page,
                     info.batteryPercentString,
                     info.remainingLabel);
         }

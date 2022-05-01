@@ -109,8 +109,8 @@ public final class RtlCompatibleViewPager extends ViewPager {
             out.writeInt(position);
         }
 
-        public static final Parcelable.ClassLoaderCreator<RtlSavedState> CREATOR
-                = new Parcelable.ClassLoaderCreator<RtlSavedState>() {
+        public static final ClassLoaderCreator<RtlSavedState> CREATOR
+                = new ClassLoaderCreator<RtlSavedState>() {
             @Override
             public RtlSavedState createFromParcel(Parcel source,
                     ClassLoader loader) {

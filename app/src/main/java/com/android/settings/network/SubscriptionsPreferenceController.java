@@ -611,7 +611,7 @@ public class SubscriptionsPreferenceController extends AbstractPreferenceControl
          * Gets config for carrier customization.
          */
         public Config getConfig(Context context) {
-            return MobileMappings.Config.readConfig(context);
+            return Config.readConfig(context);
         }
 
         /**

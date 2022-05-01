@@ -494,7 +494,7 @@ public class CryptKeeper extends Activity implements TextView.OnEditorActionList
                 }
 
                 @Override
-                public void onPostExecute(java.lang.Void v) {
+                public void onPostExecute(Void v) {
                     Settings.System.putInt(getContentResolver(), Settings.System.TEXT_SHOW_PASSWORD,
                                   password_visible ? 1 : 0);
 
@@ -723,7 +723,7 @@ public class CryptKeeper extends Activity implements TextView.OnEditorActionList
         }
 
         @Override
-        public void onPatternDetected(List<LockPatternView.Cell> pattern) {
+        public void onPatternDetected(List<Cell> pattern) {
             mLockPatternView.setEnabled(false);
             if (pattern.size() >= MIN_LENGTH_BEFORE_REPORT) {
                 new DecryptTask().execute(new String(LockPatternUtils.patternToByteArray(pattern)));
@@ -938,7 +938,7 @@ public class CryptKeeper extends Activity implements TextView.OnEditorActionList
 
         if (isEmergencyCallCapable()) {
             emergencyCall.setVisibility(View.VISIBLE);
-            emergencyCall.setOnClickListener(new View.OnClickListener() {
+            emergencyCall.setOnClickListener(new OnClickListener() {
                     @Override
 
                     public void onClick(View v) {

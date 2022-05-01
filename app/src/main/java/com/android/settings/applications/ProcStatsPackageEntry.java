@@ -151,8 +151,8 @@ public class ProcStatsPackageEntry implements Parcelable {
         dest.writeDouble(mRunWeight);
     }
 
-    public static final Parcelable.Creator<ProcStatsPackageEntry> CREATOR
-            = new Parcelable.Creator<ProcStatsPackageEntry>() {
+    public static final Creator<ProcStatsPackageEntry> CREATOR
+            = new Creator<ProcStatsPackageEntry>() {
         public ProcStatsPackageEntry createFromParcel(Parcel in) {
             return new ProcStatsPackageEntry(in);
         }

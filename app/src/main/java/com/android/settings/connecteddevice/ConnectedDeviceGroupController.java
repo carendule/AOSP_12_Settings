@@ -37,7 +37,7 @@ import com.android.settingslib.core.lifecycle.events.OnStart;
 import com.android.settingslib.core.lifecycle.events.OnStop;
 
 /**
- * Controller to maintain the {@link androidx.preference.PreferenceGroup} for all
+ * Controller to maintain the {@link PreferenceGroup} for all
  * connected devices. It uses {@link DevicePreferenceCallback} to add/remove {@link Preference}
  */
 public class ConnectedDeviceGroupController extends BasePreferenceController

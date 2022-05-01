@@ -89,7 +89,7 @@ public class QrCamera extends Handler {
     private DecodingTask mDecodeTask;
     private int mCameraOrientation;
     @VisibleForTesting
-    Camera.Parameters mParameters;
+    Parameters mParameters;
 
     public QrCamera(Context context, ScannerCallback callback) {
         mContext =  new WeakReference<Context>(context);
@@ -288,7 +288,7 @@ public class QrCamera extends Handler {
 
         private boolean initCamera(SurfaceTexture surface) {
             final int numberOfCameras = Camera.getNumberOfCameras();
-            Camera.CameraInfo cameraInfo = new Camera.CameraInfo();
+            CameraInfo cameraInfo = new CameraInfo();
             try {
                 for (int i = 0; i < numberOfCameras; ++i) {
                     Camera.getCameraInfo(i, cameraInfo);
@@ -389,7 +389,7 @@ public class QrCamera extends Handler {
 
     /** Get best preview size from the list of camera supported preview sizes. Compares the
      * preview size and aspect ratio to choose the best one. */
-    private Size getBestPreviewSize(Camera.Parameters parameters) {
+    private Size getBestPreviewSize(Parameters parameters) {
         final double minRatioDiffPercent = 0.1;
         final Size windowSize = mScannerCallback.getViewSize();
         final double winRatio = getRatio(windowSize.getWidth(), windowSize.getHeight());
@@ -409,7 +409,7 @@ public class QrCamera extends Handler {
 
     /** Get best picture size from the list of camera supported picture sizes. Compares the
      *  picture size and aspect ratio to choose the best one. */
-    private Size getBestPictureSize(Camera.Parameters parameters) {
+    private Size getBestPictureSize(Parameters parameters) {
         final Camera.Size previewSize = parameters.getPreviewSize();
         final double previewRatio = getRatio(previewSize.width, previewSize.height);
         List<Size> bestChoices = new ArrayList<>();

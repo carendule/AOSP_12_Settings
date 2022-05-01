@@ -91,14 +91,14 @@ public class AccountTypePreferenceLoader {
                     final Context targetCtx = mFragment.getActivity().createPackageContextAsUser(
                             desc.packageName, 0, mUserHandle);
                     final Theme baseTheme = mFragment.getResources().newTheme();
-                    baseTheme.applyStyle(R.style.Theme_SettingsBase, true);
+                    baseTheme.applyStyle(com.android.settingslib.widget.R.style.Theme_SettingsBase, true);
                     final Context themedCtx =
                             new LocalClassLoaderContextThemeWrapper(getClass(), targetCtx, 0);
                     themedCtx.getTheme().setTo(baseTheme);
                     prefs = mFragment.getPreferenceManager().inflateFromResource(themedCtx,
                             desc.accountPreferencesId, parent);
                 }
-            } catch (PackageManager.NameNotFoundException e) {
+            } catch (NameNotFoundException e) {
                 Log.w(TAG, "Couldn't load preferences.xml file from " + desc.packageName);
             } catch (Resources.NotFoundException e) {
                 Log.w(TAG, "Couldn't load preferences.xml file from " + desc.packageName);
@@ -209,7 +209,7 @@ public class AccountTypePreferenceLoader {
 
     /** Listens to a preference click event and starts a fragment */
     private class FragmentStarter
-        implements Preference.OnPreferenceClickListener {
+        implements OnPreferenceClickListener {
         private final String mClass;
         private final int mTitleRes;
 

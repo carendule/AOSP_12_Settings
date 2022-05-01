@@ -327,7 +327,7 @@ public class SeekBarPreference extends RestrictedPreference
      *
      * @param rangeInfoType The type of range to be shared with accessibility
      *
-     * @see android.view.accessibility.AccessibilityNodeInfo.RangeInfo
+     * @see AccessibilityNodeInfo.RangeInfo
      */
     public void setAccessibilityRangeInfoType(int rangeInfoType) {
         mAccessibilityRangeInfoType = rangeInfoType;
@@ -433,8 +433,8 @@ public class SeekBarPreference extends RestrictedPreference
         }
 
         @SuppressWarnings("unused")
-        public static final Parcelable.Creator<SavedState> CREATOR =
-                new Parcelable.Creator<SavedState>() {
+        public static final Creator<SavedState> CREATOR =
+                new Creator<SavedState>() {
             public SavedState createFromParcel(Parcel in) {
                 return new SavedState(in);
             }

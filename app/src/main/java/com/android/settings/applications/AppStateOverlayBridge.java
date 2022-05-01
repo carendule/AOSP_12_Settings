@@ -64,7 +64,7 @@ public class AppStateOverlayBridge extends AppStateAppOpsBridge {
         return super.getNumPackagesAllowedByAppOps();
     }
 
-    public static class OverlayState extends AppStateAppOpsBridge.PermissionState {
+    public static class OverlayState extends PermissionState {
         public final boolean controlEnabled;
 
         private static final List<String> DISABLE_PACKAGE_LIST = new ArrayList<>();

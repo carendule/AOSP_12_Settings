@@ -132,7 +132,7 @@ public class WifiTetherPreferenceController extends AbstractPreferenceController
                                 && mSoftApState == WifiManager.WIFI_AP_STATE_ENABLED) {
                             // Only show the number of clients when state is on
                             mPreference.setSummary(mContext.getResources().getQuantityString(
-                                    R.plurals.wifi_tether_connected_summary, clients.size(),
+                                    com.android.settingslib.R.plurals.wifi_tether_connected_summary, clients.size(),
                                     clients.size()));
                         }
                     }

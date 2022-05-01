@@ -145,7 +145,7 @@ public class EnableVerboseVendorLoggingPreferenceController
 
         if (service == null) {
             try {
-                service = android.hardware.dumpstate.V1_0.IDumpstateDevice
+                service = IDumpstateDevice
                         .getService(true /* retry */);
                 mDumpstateHalVersion = DUMPSTATE_HAL_VERSION_1_0;
             } catch (NoSuchElementException | RemoteException e) {

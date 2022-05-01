@@ -120,7 +120,7 @@ public class UsageStatsActivity extends Activity implements OnItemSelectedListen
             ArrayMap<String, UsageStats> map = new ArrayMap<>();
             final int statCount = stats.size();
             for (int i = 0; i < statCount; i++) {
-                final android.app.usage.UsageStats pkgStats = stats.get(i);
+                final UsageStats pkgStats = stats.get(i);
 
                 // load application labels for each application
                 try {

@@ -296,7 +296,7 @@ public class FaceEnrollPreviewFragment extends InstrumentedPreferenceFragment
     }
 
     /**
-     * Configures the necessary {@link android.graphics.Matrix} transformation to `mTextureView`.
+     * Configures the necessary {@link Matrix} transformation to `mTextureView`.
      * This method should be called after the camera preview size is determined in
      * setUpCameraOutputs and also the size of `mTextureView` is fixed.
      *

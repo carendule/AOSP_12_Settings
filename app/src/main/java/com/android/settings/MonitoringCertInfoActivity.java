@@ -88,7 +88,7 @@ public class MonitoringCertInfoActivity extends Activity implements OnClickListe
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
-        Intent intent = new Intent(android.provider.Settings.ACTION_TRUSTED_CREDENTIALS_USER);
+        Intent intent = new Intent(Settings.ACTION_TRUSTED_CREDENTIALS_USER);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra(TrustedCredentialsSettings.ARG_SHOW_NEW_FOR_USER, mUserId);
         startActivity(intent);

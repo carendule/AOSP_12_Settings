@@ -31,7 +31,7 @@ import com.android.settingslib.utils.ThreadUtils;
 import java.util.List;
 
 /**
- * Action to open the {@link com.android.settings.fuelgauge.RestrictedAppDetails}
+ * Action to open the {@link RestrictedAppDetails}
  */
 public class OpenRestrictAppFragmentAction extends BatteryTipAction {
     private final RestrictAppTip mRestrictAppTip;

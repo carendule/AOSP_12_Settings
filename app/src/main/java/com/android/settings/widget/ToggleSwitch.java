@@ -22,7 +22,7 @@ import android.widget.Switch;
 
 public class ToggleSwitch extends Switch {
 
-    private ToggleSwitch.OnBeforeCheckedChangeListener mOnBeforeListener;
+    private OnBeforeCheckedChangeListener mOnBeforeListener;
 
     public interface OnBeforeCheckedChangeListener {
         boolean onBeforeCheckedChanged(ToggleSwitch toggleSwitch, boolean checked);

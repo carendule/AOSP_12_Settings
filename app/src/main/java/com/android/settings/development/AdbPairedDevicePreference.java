@@ -79,7 +79,7 @@ public class AdbPairedDevicePreference extends Preference {
                          PairDevice pairedDevice) {
         preference.setTitle(pairedDevice.getDeviceName());
         preference.setSummary(pairedDevice.isConnected()
-                ? preference.getContext().getText(R.string.adb_wireless_device_connected_summary)
+                ? preference.getContext().getText(com.android.settingslib.R.string.adb_wireless_device_connected_summary)
                 : "");
     }
 

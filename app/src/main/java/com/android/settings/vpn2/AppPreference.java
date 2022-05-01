@@ -31,7 +31,7 @@ import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 
 /**
- * {@link androidx.preference.Preference} containing information about a VPN
+ * {@link Preference} containing information about a VPN
  * application. Tracks the package name and connection state.
  */
 public class AppPreference extends ManageablePreference {

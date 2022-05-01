@@ -96,7 +96,7 @@ public class WifiCallingDisclaimerFragment extends InstrumentedFragment
                 new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(itemDecoration);
 
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+        recyclerView.addOnScrollListener(new OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);

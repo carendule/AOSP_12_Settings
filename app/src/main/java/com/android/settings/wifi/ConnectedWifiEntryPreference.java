@@ -35,7 +35,7 @@ public class ConnectedWifiEntryPreference extends LongPressWifiEntryPreference i
 
     public ConnectedWifiEntryPreference(Context context, WifiEntry wifiEntry, Fragment fragment) {
         super(context, wifiEntry, fragment);
-        setWidgetLayoutResource(R.layout.preference_widget_gear_optional_background);
+        setWidgetLayoutResource(com.android.settings.R.layout.preference_widget_gear_optional_background);
     }
 
     /**
@@ -50,11 +50,11 @@ public class ConnectedWifiEntryPreference extends LongPressWifiEntryPreference i
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
 
-        final View gear = holder.findViewById(R.id.settings_button);
+        final View gear = holder.findViewById(com.android.settings.R.id.settings_button);
         gear.setOnClickListener(this);
 
         final boolean canSignIn = getWifiEntry().canSignIn();
-        holder.findViewById(R.id.settings_button_no_background).setVisibility(
+        holder.findViewById(com.android.settings.R.id.settings_button_no_background).setVisibility(
                 canSignIn ? View.INVISIBLE : View.VISIBLE);
         gear.setVisibility(canSignIn ? View.VISIBLE : View.INVISIBLE);
         holder.findViewById(R.id.two_target_divider).setVisibility(
@@ -63,7 +63,7 @@ public class ConnectedWifiEntryPreference extends LongPressWifiEntryPreference i
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.settings_button) {
+        if (v.getId() == com.android.settings.R.id.settings_button) {
             if (mOnGearClickListener != null) {
                 mOnGearClickListener.onGearClick(this);
             }

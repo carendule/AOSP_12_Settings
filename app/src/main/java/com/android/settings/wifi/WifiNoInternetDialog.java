@@ -54,7 +54,7 @@ public class WifiNoInternetDialog extends AlertActivity implements
     private ConnectivityManager mCM;
     private Network mNetwork;
     private String mNetworkName;
-    private ConnectivityManager.NetworkCallback mNetworkCallback;
+    private NetworkCallback mNetworkCallback;
     @VisibleForTesting CheckBox mAlwaysAllow;
     private String mAction;
     private boolean mButtonClicked;

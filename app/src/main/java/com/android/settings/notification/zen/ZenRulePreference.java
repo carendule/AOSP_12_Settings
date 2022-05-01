@@ -60,7 +60,7 @@ public class ZenRulePreference extends TwoTargetPreference {
             final Map.Entry<String, AutomaticZenRule> ruleEntry,
             Fragment parent, MetricsFeatureProvider metricsProvider) {
         super(context);
-        setLayoutResource(R.layout.preference_checkable_two_target);
+        setLayoutResource(com.android.settingslib.R.layout.preference_checkable_two_target);
         mBackend = ZenModeBackend.getInstance(context);
         mContext = context;
         mRule = ruleEntry.getValue();
@@ -88,7 +88,7 @@ public class ZenRulePreference extends TwoTargetPreference {
     public void onBindViewHolder(PreferenceViewHolder view) {
         super.onBindViewHolder(view);
         View settingsWidget = view.findViewById(android.R.id.widget_frame);
-        View divider = view.findViewById(R.id.two_target_divider);
+        View divider = view.findViewById(com.android.settingslib.widget.R.id.two_target_divider);
         if (mIntent != null) {
             divider.setVisibility(View.VISIBLE);
             settingsWidget.setVisibility(View.VISIBLE);
@@ -104,7 +104,7 @@ public class ZenRulePreference extends TwoTargetPreference {
             settingsWidget.setOnClickListener(null);
         }
 
-        View checkboxContainer = view.findViewById(R.id.checkbox_container);
+        View checkboxContainer = view.findViewById(com.android.settingslib.R.id.checkbox_container);
         if (checkboxContainer != null) {
             checkboxContainer.setOnClickListener(mOnCheckBoxClickListener);
         }

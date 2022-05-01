@@ -33,7 +33,7 @@ import com.android.settingslib.fuelgauge.BatterySaverUtils;
  *
  * Will call the appropriate power manager APIs and modify the correct settings to enable
  * users to control their automatic battery saver toggling preferences.
- * See {@link Settings.Global#AUTOMATIC_POWER_SAVE_MODE} for more details.
+ * See {@link Global#AUTOMATIC_POWER_SAVE_MODE} for more details.
  */
 public class BatterySaverScheduleRadioButtonsController {
 
@@ -54,13 +54,13 @@ public class BatterySaverScheduleRadioButtonsController {
     public String getDefaultKey() {
         final ContentResolver resolver = mContext.getContentResolver();
         // Note: this can also be obtained via PowerManager.getPowerSaveModeTrigger()
-        final int mode = Settings.Global.getInt(resolver, Global.AUTOMATIC_POWER_SAVE_MODE,
+        final int mode = Global.getInt(resolver, Global.AUTOMATIC_POWER_SAVE_MODE,
                 PowerManager.POWER_SAVE_MODE_TRIGGER_PERCENTAGE);
         // if mode is "dynamic" we are in routine mode, percentage with non-zero threshold is
         // percentage mode, otherwise it is no schedule mode
         if (mode == PowerManager.POWER_SAVE_MODE_TRIGGER_PERCENTAGE) {
             final int threshold =
-                    Settings.Global.getInt(resolver, Global.LOW_POWER_MODE_TRIGGER_LEVEL, 0);
+                    Global.getInt(resolver, Global.LOW_POWER_MODE_TRIGGER_LEVEL, 0);
             if (threshold <= 0) {
                 return KEY_NO_SCHEDULE;
             }
@@ -109,9 +109,9 @@ public class BatterySaverScheduleRadioButtonsController {
         }
         // Trigger level is intentionally left alone when going between dynamic and percentage modes
         // so that a users percentage based schedule is preserved when they toggle between the two.
-        Settings.Global.putInt(resolver, Global.AUTOMATIC_POWER_SAVE_MODE, mode);
+        Global.putInt(resolver, Global.AUTOMATIC_POWER_SAVE_MODE, mode);
         if (mode != PowerManager.POWER_SAVE_MODE_TRIGGER_DYNAMIC) {
-            Settings.Global.putInt(resolver, Global.LOW_POWER_MODE_TRIGGER_LEVEL, triggerLevel);
+            Global.putInt(resolver, Global.LOW_POWER_MODE_TRIGGER_LEVEL, triggerLevel);
         }
         // Suppress battery saver suggestion notification if enabling scheduling battery saver.
         if (mode == PowerManager.POWER_SAVE_MODE_TRIGGER_DYNAMIC || triggerLevel != 0) {

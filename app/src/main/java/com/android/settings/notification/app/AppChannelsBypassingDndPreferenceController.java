@@ -195,7 +195,7 @@ public class AppChannelsBypassingDndPreferenceController extends NotificationPre
                         .setDestination(ChannelNotificationSettings.class.getName())
                         .setArguments(channelArgs)
                         .setUserHandle(UserHandle.of(mAppRow.userId))
-                        .setTitleRes(com.android.settings.R.string.notification_channel_title)
+                        .setTitleRes(R.string.notification_channel_title)
                         .setSourceMetricsCategory(SettingsEnums.DND_APPS_BYPASSING)
                         .launch();
                 return true;

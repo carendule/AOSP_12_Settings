@@ -85,7 +85,7 @@ public class SummaryTip extends BatteryTip {
         return mAverageTimeMs;
     }
 
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
+    public static final Creator CREATOR = new Creator() {
         public BatteryTip createFromParcel(Parcel in) {
             return new SummaryTip(in);
         }

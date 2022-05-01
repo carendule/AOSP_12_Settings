@@ -96,7 +96,7 @@ class SliceDataConverter {
      * {@link FeatureFactory#getSearchFeatureProvider()}.
      * - From each fragment, grab a {@link SearchIndexProvider}.
      * - For each provider, collect XML resource layout and a list of
-     * {@link com.android.settings.core.BasePreferenceController}.
+     * {@link BasePreferenceController}.
      */
     public List<SliceData> getSliceData() {
         List<SliceData> sliceData = new ArrayList<>();

@@ -115,7 +115,7 @@ public class MobilePlanPreferenceController extends AbstractPreferenceController
     @Override
     public boolean isAvailable() {
         final boolean isPrefAllowedOnDevice = mContext.getResources().getBoolean(
-                com.android.settings.R.bool.config_show_mobile_plan);
+                R.bool.config_show_mobile_plan);
         final boolean isPrefAllowedForUser = !mIsSecondaryUser
                 && !Utils.isWifiOnly(mContext)
                 && !hasBaseUserRestriction(mContext, DISALLOW_CONFIG_MOBILE_NETWORKS, myUserId());

@@ -631,7 +631,7 @@ public class MobileNetworkUtils {
 
     /**
      * This method is migrated from
-     * {@link android.telephony.TelephonyManager.getNetworkOperatorName}. Which provides
+     * {@link TelephonyManager.getNetworkOperatorName}. Which provides
      *
      * 1. Better support under multi-SIM environment.
      * 2. Similar design which aligned with operator name displayed in status bar

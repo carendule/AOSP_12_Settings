@@ -44,7 +44,7 @@ public class UnrestrictedDataAccessPreference extends AppSwitchPreference implem
             ApplicationsState applicationsState, DataSaverBackend dataSaverBackend,
             DashboardFragment parentFragment) {
         super(context);
-        setWidgetLayoutResource(R.layout.restricted_switch_widget);
+        setWidgetLayoutResource(com.android.settingslib.R.layout.restricted_switch_widget);
         mHelper = new RestrictedPreferenceHelper(context, this, null);
         mEntry = entry;
         mDataUsageState = (AppStateDataUsageBridge.DataUsageState) mEntry.extraInfo;
@@ -173,7 +173,7 @@ public class UnrestrictedDataAccessPreference extends AppSwitchPreference implem
         if (mDataUsageState != null) {
             setChecked(mDataUsageState.isDataSaverAllowlisted);
             if (isDisabledByAdmin()) {
-                setSummary(R.string.disabled_by_admin);
+                setSummary(com.android.settingslib.R.string.disabled_by_admin);
             } else if (mDataUsageState.isDataSaverDenylisted) {
                 setSummary(R.string.restrict_background_blocklisted);
             } else {

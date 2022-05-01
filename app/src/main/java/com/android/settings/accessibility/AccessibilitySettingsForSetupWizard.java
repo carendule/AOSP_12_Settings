@@ -87,7 +87,7 @@ public class AccessibilitySettingsForSetupWizard extends SettingsPreferenceFragm
         layout.setIcon(getPrefContext().getDrawable(R.drawable.ic_accessibility_visibility));
 
         if (ThemeHelper.shouldApplyExtendedPartnerConfig(getActivity())) {
-            final LinearLayout headerLayout = layout.findManagedViewById(R.id.sud_layout_header);
+            final LinearLayout headerLayout = layout.findManagedViewById(com.google.android.setupdesign.R.id.sud_layout_header);
             headerLayout.setPadding(0, headerLayout.getPaddingTop(), 0,
                     headerLayout.getPaddingBottom());
         }

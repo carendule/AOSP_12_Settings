@@ -301,7 +301,7 @@ public class FaceEnrollIntroduction extends BiometricEnrollIntroduction {
                     .setText(R.string.security_settings_face_enroll_introduction_agree)
                     .setButtonType(FooterButton.ButtonType.OPT_IN)
                     .setListener(this::onNextButtonClick)
-                    .setTheme(R.style.SudGlifButton_Primary)
+                    .setTheme(com.google.android.setupdesign.R.style.SudGlifButton_Primary)
                     .build();
         }
         return mPrimaryFooterButton;
@@ -315,7 +315,7 @@ public class FaceEnrollIntroduction extends BiometricEnrollIntroduction {
                     .setText(R.string.security_settings_face_enroll_introduction_no_thanks)
                     .setListener(this::onSkipButtonClick)
                     .setButtonType(FooterButton.ButtonType.NEXT)
-                    .setTheme(R.style.SudGlifButton_Primary)
+                    .setTheme(com.google.android.setupdesign.R.style.SudGlifButton_Primary)
                     .build();
         }
         return mSecondaryFooterButton;

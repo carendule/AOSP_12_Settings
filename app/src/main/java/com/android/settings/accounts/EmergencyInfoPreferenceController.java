@@ -47,8 +47,8 @@ public class EmergencyInfoPreferenceController extends BasePreferenceController 
         if (isAvailable()) {
             SearchIndexableRaw data = new SearchIndexableRaw(mContext);
             final Resources res = mContext.getResources();
-            data.title = res.getString(com.android.settings.R.string.emergency_info_title);
-            data.screenTitle = res.getString(com.android.settings.R.string.emergency_info_title);
+            data.title = res.getString(R.string.emergency_info_title);
+            data.screenTitle = res.getString(R.string.emergency_info_title);
             rawData.add(data);
         }
     }

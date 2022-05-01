@@ -29,14 +29,14 @@ public interface ContextualCardRenderer {
     /**
      * When {@link ContextualCardsAdapter} calls {@link ContextualCardsAdapter#onCreateViewHolder},
      * this method will be called to retrieve the corresponding
-     * {@link androidx.recyclerview.widget.RecyclerView.ViewHolder}.
+     * {@link RecyclerView.ViewHolder}.
      */
     RecyclerView.ViewHolder createViewHolder(View view, @LayoutRes int viewType);
 
     /**
      * When {@link ContextualCardsAdapter} calls {@link ContextualCardsAdapter#onBindViewHolder},
      * this method will be called to bind data to the
-     * {@link androidx.recyclerview.widget.RecyclerView.ViewHolder}.
+     * {@link RecyclerView.ViewHolder}.
      */
     void bindView(RecyclerView.ViewHolder holder, ContextualCard card);
 }

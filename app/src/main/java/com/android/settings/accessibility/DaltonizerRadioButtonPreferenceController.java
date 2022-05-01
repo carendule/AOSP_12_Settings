@@ -48,7 +48,7 @@ public class DaltonizerRadioButtonPreferenceController extends BasePreferenceCon
     // RadioButtonPreference key, each preference represent a daltonizer value.
     private final ContentResolver mContentResolver;
     private final Resources mResources;
-    private DaltonizerRadioButtonPreferenceController.OnChangeListener mOnChangeListener;
+    private OnChangeListener mOnChangeListener;
     private RadioButtonPreference mPreference;
     private int mAccessibilityDaltonizerValue;
 
@@ -83,7 +83,7 @@ public class DaltonizerRadioButtonPreferenceController extends BasePreferenceCon
     }
 
     public void setOnChangeListener(
-            DaltonizerRadioButtonPreferenceController.OnChangeListener listener) {
+            OnChangeListener listener) {
         mOnChangeListener = listener;
     }
 

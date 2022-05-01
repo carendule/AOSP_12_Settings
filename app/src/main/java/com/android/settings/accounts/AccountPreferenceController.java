@@ -331,7 +331,7 @@ public class AccountPreferenceController extends AbstractPreferenceController
             preferenceGroup.setContentDescription(title);
         } else if (userInfo.isManagedProfile()) {
             if (mType == ProfileSelectFragment.ProfileType.ALL) {
-                preferenceGroup.setTitle(R.string.category_work);
+                preferenceGroup.setTitle(com.android.settingslib.R.string.category_work);
                 final String workGroupSummary = getWorkGroupSummary(context, userInfo);
                 preferenceGroup.setSummary(workGroupSummary);
                 preferenceGroup.setContentDescription(
@@ -343,7 +343,7 @@ public class AccountPreferenceController extends AbstractPreferenceController
             profileData.managedProfilePreference = newManagedProfileSettings();
         } else {
             if (mType == ProfileSelectFragment.ProfileType.ALL) {
-                preferenceGroup.setTitle(R.string.category_personal);
+                preferenceGroup.setTitle(com.android.settingslib.R.string.category_personal);
                 preferenceGroup.setContentDescription(
                         mContext.getString(R.string.accessibility_category_personal));
             }

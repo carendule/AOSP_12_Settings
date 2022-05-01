@@ -280,7 +280,7 @@ public class BiometricEnrollActivity extends InstrumentedActivity {
         }
 
         // This will need to be updated if the device has sensors other than BIOMETRIC_STRONG
-        if (!setupWizard && authenticators == BiometricManager.Authenticators.DEVICE_CREDENTIAL) {
+        if (!setupWizard && authenticators == Authenticators.DEVICE_CREDENTIAL) {
             launchCredentialOnlyEnroll();
             finish();
         } else if (canUseFace && canUseFingerprint) {
@@ -333,7 +333,7 @@ public class BiometricEnrollActivity extends InstrumentedActivity {
     // handles responses while parental consent is pending
     private void handleOnActivityResultWhileConsenting(
             int requestCode, int resultCode, Intent data) {
-        overridePendingTransition(R.anim.sud_slide_next_in, R.anim.sud_slide_next_out);
+        overridePendingTransition(com.google.android.setupdesign.R.anim.sud_slide_next_in, com.google.android.setupdesign.R.anim.sud_slide_next_out);
 
         switch (requestCode) {
             case REQUEST_CHOOSE_LOCK:
@@ -381,7 +381,7 @@ public class BiometricEnrollActivity extends InstrumentedActivity {
             setResult(RESULT_OK, newResultIntent());
             finish();
         } else if (mMultiBiometricEnrollHelper == null) {
-            overridePendingTransition(R.anim.sud_slide_next_in, R.anim.sud_slide_next_out);
+            overridePendingTransition(com.google.android.setupdesign.R.anim.sud_slide_next_in, com.google.android.setupdesign.R.anim.sud_slide_next_out);
 
             switch (requestCode) {
                 case REQUEST_CHOOSE_LOCK:

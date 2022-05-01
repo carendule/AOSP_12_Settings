@@ -242,7 +242,7 @@ public class BatteryUtils {
     }
 
     /**
-     * Find the package name for a {@link android.os.BatteryStats.Uid}
+     * Find the package name for a {@link BatteryStats.Uid}
      *
      * @param uid id to get the package name
      * @return the package name. If there are multiple packages related to

@@ -121,14 +121,14 @@ public class ZenOnboardingActivity extends Activity {
     }
 
     public void save(View button) {
-        NotificationManager.Policy policy = mNm.getNotificationPolicy();
+        Policy policy = mNm.getNotificationPolicy();
 
         if (mNewSettingButton.isChecked()) {
-            NotificationManager.Policy newPolicy = new NotificationManager.Policy(
+            Policy newPolicy = new Policy(
                     Policy.PRIORITY_CATEGORY_REPEAT_CALLERS | policy.priorityCategories,
                     Policy.PRIORITY_SENDERS_STARRED,
                     policy.priorityMessageSenders,
-                    NotificationManager.Policy.getAllSuppressedVisualEffects());
+                    Policy.getAllSuppressedVisualEffects());
             mNm.setNotificationPolicy(newPolicy);
             mMetrics.action(SettingsEnums.ACTION_ZEN_ONBOARDING_OK);
         } else {
@@ -158,7 +158,7 @@ public class ZenOnboardingActivity extends Activity {
         // - fresh P+ device
         // - if zen visual effects values were changed by the user in Settings
         NotificationManager nm = context.getSystemService(NotificationManager.class);
-        if (NotificationManager.Policy.areAllVisualEffectsSuppressed(
+        if (Policy.areAllVisualEffectsSuppressed(
                 nm.getNotificationPolicy().suppressedVisualEffects)) {
             Settings.Secure.putInt(context.getContentResolver(),
                     Settings.Secure.ZEN_SETTINGS_UPDATED, 1);

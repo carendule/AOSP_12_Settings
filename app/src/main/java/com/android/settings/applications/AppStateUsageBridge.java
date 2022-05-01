@@ -59,7 +59,7 @@ public class AppStateUsageBridge extends AppStateAppOpsBridge {
         return new UsageState(permissionState);
     }
 
-    public static class UsageState extends AppStateAppOpsBridge.PermissionState {
+    public static class UsageState extends PermissionState {
 
         public UsageState(PermissionState permissionState) {
             super(permissionState.packageName, permissionState.userHandle);

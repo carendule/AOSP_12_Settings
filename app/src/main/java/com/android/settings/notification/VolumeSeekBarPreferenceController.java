@@ -33,7 +33,7 @@ public abstract class VolumeSeekBarPreferenceController extends
         AdjustVolumeRestrictedPreferenceController implements LifecycleObserver {
 
     protected VolumeSeekBarPreference mPreference;
-    protected VolumeSeekBarPreference.Callback mVolumePreferenceCallback;
+    protected Callback mVolumePreferenceCallback;
     protected AudioHelper mHelper;
 
     public VolumeSeekBarPreferenceController(Context context, String key) {

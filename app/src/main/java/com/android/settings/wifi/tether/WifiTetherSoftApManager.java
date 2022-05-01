@@ -8,7 +8,7 @@ import android.os.HandlerExecutor;
 import java.util.List;
 
 /**
- * Wrapper for {@link android.net.wifi.WifiManager.SoftApCallback} to pass the robo test
+ * Wrapper for {@link WifiManager.SoftApCallback} to pass the robo test
  */
 public class WifiTetherSoftApManager {
 

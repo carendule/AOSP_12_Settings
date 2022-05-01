@@ -84,6 +84,6 @@ public class AutoTimeFormatPreferenceController extends AbstractPreferenceContro
      * the locale.
      */
     static boolean isAutoTimeFormatSelection(Context context) {
-        return Settings.System.getString(context.getContentResolver(), System.TIME_12_24) == null;
+        return System.getString(context.getContentResolver(), System.TIME_12_24) == null;
     }
 }

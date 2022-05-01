@@ -416,7 +416,7 @@ public class ConfirmLockPattern extends ConfirmDeviceCredentialBaseActivity {
 
             }
 
-            public void onPatternDetected(List<LockPatternView.Cell> pattern) {
+            public void onPatternDetected(List<Cell> pattern) {
                 if (mPendingLockCheck != null || mDisappearing) {
                     return;
                 }
@@ -446,7 +446,7 @@ public class ConfirmLockPattern extends ConfirmDeviceCredentialBaseActivity {
             }
 
             private boolean isInternalActivity() {
-                return getActivity() instanceof ConfirmLockPattern.InternalActivity;
+                return getActivity() instanceof InternalActivity;
             }
 
             private void startVerifyPattern(final LockscreenCredential pattern,

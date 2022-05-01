@@ -385,9 +385,9 @@ public class TrustedCredentialsSettings extends InstrumentedFragment
 
             final TextView title = (TextView) convertView.findViewById(android.R.id.title);
             if (getUserInfoByGroup(groupPosition).isManagedProfile()) {
-                title.setText(R.string.category_work);
+                title.setText(com.android.settingslib.R.string.category_work);
             } else {
-                title.setText(R.string.category_personal);
+                title.setText(com.android.settingslib.R.string.category_personal);
             }
             title.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_END);
 

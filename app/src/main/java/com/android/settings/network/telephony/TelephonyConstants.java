@@ -24,7 +24,7 @@ import android.telephony.TelephonyManager;
 public class TelephonyConstants {
 
     /**
-     * Copied from {@link android.telephony.TelephonyManager}
+     * Copied from {@link TelephonyManager}
      */
     public static class TelephonyManagerConstants {
 

@@ -144,7 +144,7 @@ public class ResetNetwork extends InstrumentedFragment {
      * keyguard confirmation if the user has currently enabled one.  If there
      * is no keyguard available, we simply go to the final confirmation prompt.
      */
-    private final Button.OnClickListener mInitiateListener = new Button.OnClickListener() {
+    private final OnClickListener mInitiateListener = new OnClickListener() {
 
         @Override
         public void onClick(View v) {
@@ -269,7 +269,7 @@ public class ResetNetwork extends InstrumentedFragment {
             return false;
         }
         ContentResolver resolver = context.getContentResolver();
-        return Settings.Global.getInt(resolver, Global.EUICC_PROVISIONED, 0) != 0
+        return Global.getInt(resolver, Global.EUICC_PROVISIONED, 0) != 0
                 || DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(context);
     }
 

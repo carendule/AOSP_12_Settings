@@ -309,10 +309,10 @@ public class ProcessStatsDetail extends SettingsPreferenceFragment {
         return processName;
     }
 
-    final static Comparator<ProcStatsEntry.Service> sServiceCompare
-            = new Comparator<ProcStatsEntry.Service>() {
+    final static Comparator<Service> sServiceCompare
+            = new Comparator<Service>() {
         @Override
-        public int compare(ProcStatsEntry.Service lhs, ProcStatsEntry.Service rhs) {
+        public int compare(Service lhs, Service rhs) {
             if (lhs.mDuration < rhs.mDuration) {
                 return 1;
             } else if (lhs.mDuration > rhs.mDuration) {
@@ -335,7 +335,7 @@ public class ProcessStatsDetail extends SettingsPreferenceFragment {
     };
 
     static class PkgService {
-        final ArrayList<ProcStatsEntry.Service> mServices = new ArrayList<>();
+        final ArrayList<Service> mServices = new ArrayList<>();
         long mDuration;
     }
 
@@ -345,9 +345,9 @@ public class ProcessStatsDetail extends SettingsPreferenceFragment {
         for (int ip = 0; ip < entry.mServices.size(); ip++) {
             String pkg = entry.mServices.keyAt(ip);
             PkgService psvc = null;
-            ArrayList<ProcStatsEntry.Service> services = entry.mServices.valueAt(ip);
+            ArrayList<Service> services = entry.mServices.valueAt(ip);
             for (int is=services.size()-1; is>=0; is--) {
-                ProcStatsEntry.Service pent = services.get(is);
+                Service pent = services.get(is);
                 if (pent.mDuration >= mOnePercentTime) {
                     if (psvc == null) {
                         psvc = pkgServices.get(pkg);
@@ -364,10 +364,10 @@ public class ProcessStatsDetail extends SettingsPreferenceFragment {
         }
         Collections.sort(pkgList, sServicePkgCompare);
         for (int ip = 0; ip < pkgList.size(); ip++) {
-            ArrayList<ProcStatsEntry.Service> services = pkgList.get(ip).mServices;
+            ArrayList<Service> services = pkgList.get(ip).mServices;
             Collections.sort(services, sServiceCompare);
             for (int is=0; is<services.size(); is++) {
-                final ProcStatsEntry.Service service = services.get(is);
+                final Service service = services.get(is);
                 CharSequence label = getLabel(service);
                 CancellablePreference servicePref = new CancellablePreference(getPrefContext());
                 servicePref.setSelectable(false);
@@ -463,7 +463,7 @@ public class ProcessStatsDetail extends SettingsPreferenceFragment {
                     if ((info.flags&ApplicationInfo.FLAG_STOPPED) == 0) {
                         isStarted = true;
                     }
-                } catch (PackageManager.NameNotFoundException e) {
+                } catch (NameNotFoundException e) {
                 }
             }
         }

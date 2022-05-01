@@ -569,7 +569,7 @@ public class BatteryEntry {
             Context context, String name, final int uid) {
         Drawable icon = context.getDrawable(R.drawable.ic_power_system);
         if (uid == 0) {
-            name = context.getResources().getString(R.string.process_kernel_label);
+            name = context.getResources().getString(com.android.settingslib.R.string.process_kernel_label);
         } else if ("mediaserver".equals(name)) {
             name = context.getResources().getString(R.string.process_mediaserver_label);
         } else if ("dex2oat".equals(name) || "dex2oat32".equals(name) ||

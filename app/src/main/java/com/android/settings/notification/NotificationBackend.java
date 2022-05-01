@@ -529,16 +529,16 @@ public class NotificationBackend {
         }
         if (sortByRecency) {
             if (state.lastSent == 0) {
-                return context.getString(R.string.notifications_sent_never);
+                return context.getString(com.android.settings.R.string.notifications_sent_never);
             }
             return StringUtil.formatRelativeTime(
                     context, System.currentTimeMillis() - state.lastSent, true);
         } else {
             if (state.avgSentDaily > 0) {
-                return context.getResources().getQuantityString(R.plurals.notifications_sent_daily,
+                return context.getResources().getQuantityString(com.android.settings.R.plurals.notifications_sent_daily,
                         state.avgSentDaily, state.avgSentDaily);
             }
-            return context.getResources().getQuantityString(R.plurals.notifications_sent_weekly,
+            return context.getResources().getQuantityString(com.android.settings.R.plurals.notifications_sent_weekly,
                     state.avgSentWeekly, state.avgSentWeekly);
         }
     }
@@ -627,7 +627,7 @@ public class NotificationBackend {
                 context.getPackageManager(),
                 IconDrawableFactory.newInstance(context, false),
                 context.getResources().getDimensionPixelSize(
-                        R.dimen.conversation_icon_size));
+                        com.android.settings.R.dimen.conversation_icon_size));
         return iconFactory.getConversationDrawable(info, pkg, uid, important);
     }
 

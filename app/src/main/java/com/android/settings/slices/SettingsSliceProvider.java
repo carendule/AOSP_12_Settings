@@ -81,7 +81,7 @@ import java.util.stream.Collectors;
  *
  * <p>When an action is taken on that {@link Slice}, we receive the action in
  * {@link SliceBroadcastReceiver}, and use the
- * {@link com.android.settings.core.BasePreferenceController} indexed as
+ * {@link BasePreferenceController} indexed as
  * {@link SlicesDatabaseHelper.IndexColumns#CONTROLLER} to manipulate the setting.
  */
 public class SettingsSliceProvider extends SliceProvider {
@@ -222,7 +222,7 @@ public class SettingsSliceProvider extends SliceProvider {
             final boolean nightMode = Utils.isNightMode(getContext());
             if (mNightMode == null) {
                 mNightMode = nightMode;
-                getContext().setTheme(R.style.Theme_SettingsBase);
+                getContext().setTheme(com.android.settingslib.widget.R.style.Theme_SettingsBase);
             } else if (mNightMode != nightMode) {
                 Log.d(TAG, "Night mode changed, reload theme");
                 mNightMode = nightMode;

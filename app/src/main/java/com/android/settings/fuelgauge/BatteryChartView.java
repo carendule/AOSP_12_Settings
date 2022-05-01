@@ -109,7 +109,7 @@ public class BatteryChartView extends AppCompatImageView implements View.OnClick
     private TrapezoidSlot[] mTrapezoidSlots;
     // Records the location to calculate selected index.
     private MotionEvent mTouchUpEvent;
-    private BatteryChartView.OnSelectListener mOnSelectListener;
+    private OnSelectListener mOnSelectListener;
 
     public BatteryChartView(Context context) {
         super(context, null);
@@ -174,7 +174,7 @@ public class BatteryChartView extends AppCompatImageView implements View.OnClick
     }
 
     /** Sets the callback to monitor the selected group index. */
-    public void setOnSelectListener(BatteryChartView.OnSelectListener listener) {
+    public void setOnSelectListener(OnSelectListener listener) {
         mOnSelectListener = listener;
     }
 

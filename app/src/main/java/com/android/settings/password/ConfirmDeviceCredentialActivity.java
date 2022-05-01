@@ -386,7 +386,7 @@ public class ConfirmDeviceCredentialActivity extends FragmentActivity {
     }
 
     private boolean isInternalActivity() {
-        return this instanceof ConfirmDeviceCredentialActivity.InternalActivity;
+        return this instanceof InternalActivity;
     }
 
     private String getTitleFromOrganizationName(int userId) {

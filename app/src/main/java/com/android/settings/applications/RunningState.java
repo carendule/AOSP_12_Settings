@@ -139,8 +139,8 @@ public class RunningState {
 
     int mSequence = 0;
 
-    final Comparator<RunningState.MergedItem> mBackgroundComparator =
-            new Comparator<RunningState.MergedItem>() {
+    final Comparator<MergedItem> mBackgroundComparator =
+            new Comparator<MergedItem>() {
                 @Override
                 public int compare(MergedItem lhs, MergedItem rhs) {
                     if (DEBUG_COMPARE) {

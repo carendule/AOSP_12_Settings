@@ -291,16 +291,16 @@ public class SidecarFragment extends Fragment {
                         .append(getClass().getCanonicalName());
         sb.append(", State: ");
         switch (mState) {
-            case SidecarFragment.State.INIT:
+            case State.INIT:
                 sb.append("State.INIT");
                 break;
-            case SidecarFragment.State.RUNNING:
+            case State.RUNNING:
                 sb.append("State.RUNNING");
                 break;
-            case SidecarFragment.State.SUCCESS:
+            case State.SUCCESS:
                 sb.append("State.SUCCESS");
                 break;
-            case SidecarFragment.State.ERROR:
+            case State.ERROR:
                 sb.append("State.ERROR");
                 break;
             default:
@@ -308,7 +308,7 @@ public class SidecarFragment extends Fragment {
                 break;
         }
         switch (mSubstate) {
-            case SidecarFragment.Substate.UNUSED:
+            case Substate.UNUSED:
                 sb.append(", Substate.UNUSED");
                 break;
             default:

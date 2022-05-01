@@ -301,7 +301,7 @@ public class NetworkProviderWorker extends WifiScanWorker implements
 
     @VisibleForTesting
     Config getConfig(Context context) {
-        return MobileMappings.Config.readConfig(context);
+        return Config.readConfig(context);
     }
 
     /**

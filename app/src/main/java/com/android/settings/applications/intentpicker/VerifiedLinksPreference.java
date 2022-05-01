@@ -54,7 +54,7 @@ public class VerifiedLinksPreference extends TwoTargetPreference {
         mContext = context;
         mOnWidgetClickListener = null;
         mShowCheckBox = true;
-        setLayoutResource(R.layout.preference_checkable_two_target);
+        setLayoutResource(com.android.settingslib.R.layout.preference_checkable_two_target);
         setWidgetLayoutResource(R.layout.verified_links_widget);
     }
 
@@ -76,13 +76,13 @@ public class VerifiedLinksPreference extends TwoTargetPreference {
     public void onBindViewHolder(PreferenceViewHolder view) {
         super.onBindViewHolder(view);
         final View settingsWidget = view.findViewById(android.R.id.widget_frame);
-        final View divider = view.findViewById(R.id.two_target_divider);
+        final View divider = view.findViewById(com.android.settingslib.R.id.two_target_divider);
         divider.setVisibility(View.VISIBLE);
         settingsWidget.setVisibility(View.VISIBLE);
         if (mOnWidgetClickListener != null) {
             settingsWidget.setOnClickListener(mOnWidgetClickListener);
         }
-        final View checkboxContainer = view.findViewById(R.id.checkbox_container);
+        final View checkboxContainer = view.findViewById(com.android.settingslib.R.id.checkbox_container);
         final View parentView = (View) checkboxContainer.getParent();
         parentView.setEnabled(false);
         parentView.setClickable(false);

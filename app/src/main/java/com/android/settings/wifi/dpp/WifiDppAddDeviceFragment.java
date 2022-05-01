@@ -140,7 +140,7 @@ public class WifiDppAddDeviceFragment extends WifiDppQrCodeBaseFragment {
             do {
                 try {
                     key = channelListArray.keyAt(index);
-                } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+                } catch (ArrayIndexOutOfBoundsException e) {
                     break;
                 }
                 JSONArray channelsInClassArray = new JSONArray();

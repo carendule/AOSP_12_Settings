@@ -162,7 +162,7 @@ public class EncryptionInterstitial extends SettingsActivity {
                             .setText(R.string.encryption_interstitial_no)
                             .setListener(this::onNoButtonClicked)
                             .setButtonType(FooterButton.ButtonType.SKIP)
-                            .setTheme(R.style.SudGlifButton_Secondary)
+                            .setTheme(com.google.android.setupdesign.R.style.SudGlifButton_Secondary)
                             .build()
             );
 
@@ -171,7 +171,7 @@ public class EncryptionInterstitial extends SettingsActivity {
                             .setText(R.string.encryption_interstitial_yes)
                             .setListener(this::onYesButtonClicked)
                             .setButtonType(FooterButton.ButtonType.NEXT)
-                            .setTheme(R.style.SudGlifButton_Primary)
+                            .setTheme(com.google.android.setupdesign.R.style.SudGlifButton_Primary)
                             .build()
             );
         }

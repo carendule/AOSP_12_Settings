@@ -219,7 +219,7 @@ public class ChooseLockGeneric extends SettingsActivity {
             // Defaults to needing to confirm credentials
             final boolean confirmCredentials = intent
                 .getBooleanExtra(CONFIRM_CREDENTIALS, true);
-            if (activity instanceof ChooseLockGeneric.InternalActivity) {
+            if (activity instanceof InternalActivity) {
                 mPasswordConfirmed = !confirmCredentials;
                 mUserPassword = intent.getParcelableExtra(
                         ChooseLockSettingsHelper.EXTRA_KEY_PASSWORD);
@@ -366,8 +366,8 @@ public class ChooseLockGeneric extends SettingsActivity {
             return (pdbm == null || pdbm.getDataBlockSize() == 0);
         }
 
-        protected Class<? extends ChooseLockGeneric.InternalActivity> getInternalActivityClass() {
-            return ChooseLockGeneric.InternalActivity.class;
+        protected Class<? extends InternalActivity> getInternalActivityClass() {
+            return InternalActivity.class;
         }
 
         protected void addHeaderView() {

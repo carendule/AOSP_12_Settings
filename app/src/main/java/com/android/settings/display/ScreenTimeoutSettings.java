@@ -129,7 +129,7 @@ public class ScreenTimeoutSettings extends RadioButtonPickerFragment implements
         mPrivacyPreference.setIcon(R.drawable.ic_privacy_shield_24dp);
         mPrivacyPreference.setTitle(R.string.adaptive_sleep_privacy);
         mPrivacyPreference.setSelectable(false);
-        mPrivacyPreference.setLayoutResource(R.layout.preference_footer);
+        mPrivacyPreference.setLayoutResource(com.android.settingslib.widget.R.layout.preference_footer);
         mPrivacyManager = SensorPrivacyManager.getInstance(context);
         mPrivacyManager.addSensorPrivacyListener(CAMERA,
                 (sensor, enabled) -> mAdaptiveSleepController.updatePreference());
@@ -201,7 +201,7 @@ public class ScreenTimeoutSettings extends RadioButtonPickerFragment implements
         mPrivacyPreference.setIcon(R.drawable.ic_privacy_shield_24dp);
         mPrivacyPreference.setTitle(R.string.adaptive_sleep_privacy);
         mPrivacyPreference.setSelectable(false);
-        mPrivacyPreference.setLayoutResource(R.layout.preference_footer);
+        mPrivacyPreference.setLayoutResource(com.android.settingslib.widget.R.layout.preference_footer);
 
         if (isScreenAttentionAvailable(getContext())) {
             mAdaptiveSleepPermissionController.addToScreen(screen);
@@ -240,7 +240,7 @@ public class ScreenTimeoutSettings extends RadioButtonPickerFragment implements
         }
 
         mDisableOptionsPreference = new FooterPreference(getContext());
-        mDisableOptionsPreference.setLayoutResource(R.layout.preference_footer);
+        mDisableOptionsPreference.setLayoutResource(com.android.settingslib.widget.R.layout.preference_footer);
         mDisableOptionsPreference.setTitle(spannableString);
         mDisableOptionsPreference.setSelectable(false);
         mDisableOptionsPreference.setIcon(R.drawable.ic_info_outline_24dp);

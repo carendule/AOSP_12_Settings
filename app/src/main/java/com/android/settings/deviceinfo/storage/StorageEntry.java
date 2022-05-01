@@ -91,8 +91,8 @@ public class StorageEntry implements Comparable<StorageEntry>, Parcelable {
         out.writeString(mVolumeInfoDescription);
     }
 
-    public static final Parcelable.Creator<StorageEntry> CREATOR =
-            new Parcelable.Creator<StorageEntry>() {
+    public static final Creator<StorageEntry> CREATOR =
+            new Creator<StorageEntry>() {
                 public StorageEntry createFromParcel(Parcel in) {
                     return new StorageEntry(in);
                 }

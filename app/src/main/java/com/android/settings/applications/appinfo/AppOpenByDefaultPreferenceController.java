@@ -83,7 +83,7 @@ public class AppOpenByDefaultPreferenceController extends AppInfoPreferenceContr
     @VisibleForTesting
     CharSequence getSubtext() {
         return mContext.getText(isLinkHandlingAllowed()
-                ? R.string.app_link_open_always : R.string.app_link_open_never);
+                ? com.android.settings.R.string.app_link_open_always : com.android.settings.R.string.app_link_open_never);
     }
 
     @VisibleForTesting

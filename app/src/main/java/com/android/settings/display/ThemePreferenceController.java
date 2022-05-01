@@ -129,7 +129,7 @@ public class ThemePreferenceController extends AbstractPreferenceController impl
         try {
             PackageInfo pi = mPackageManager.getPackageInfo(oi.packageName, 0);
             return pi != null && !pi.isStaticOverlayPackage();
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (NameNotFoundException e) {
             return false;
         }
     }

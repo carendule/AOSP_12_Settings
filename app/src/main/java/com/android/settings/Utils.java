@@ -806,7 +806,7 @@ public final class Utils extends com.android.settingslib.Utils {
                     PackageManager.MATCH_DISABLED_COMPONENTS
                     | PackageManager.MATCH_ANY_USER);
             return appInfo.loadLabel(context.getPackageManager());
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (NameNotFoundException e) {
             Log.e(TAG, "Unable to find info for package: " + packageName);
         }
         return null;
@@ -829,7 +829,7 @@ public final class Utils extends com.android.settingslib.Utils {
         try {
             return context.createPackageContextAsUser(
                     context.getPackageName(), 0 /* flags */, UserHandle.of(userId));
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (NameNotFoundException e) {
             Log.e(TAG, "Failed to create user context", e);
         }
         return null;
@@ -974,7 +974,7 @@ public final class Utils extends com.android.settingslib.Utils {
         if ((info.flags & ApplicationInfo.FLAG_INSTALLED) == 0) {
             return R.string.not_installed;
         }
-        return info.enabled ? R.string.installed : R.string.disabled;
+        return info.enabled ? R.string.installed : com.android.settingslib.R.string.disabled;
     }
 
     private static boolean isVolumeValid(VolumeInfo volume) {
@@ -1087,7 +1087,7 @@ public final class Utils extends com.android.settingslib.Utils {
             final ApplicationInfo appInfo = packageManager.getApplicationInfoAsUser(
                     packageName, PackageManager.GET_META_DATA, userId);
             return iconDrawableFactory.getBadgedIcon(appInfo, userId);
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (NameNotFoundException e) {
             return packageManager.getDefaultActivityIcon();
         }
     }

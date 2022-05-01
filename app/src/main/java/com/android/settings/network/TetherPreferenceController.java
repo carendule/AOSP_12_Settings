@@ -64,7 +64,7 @@ public class TetherPreferenceController extends AbstractPreferenceController imp
     private final TetheringManager mTetheringManager;
     @VisibleForTesting
     final BluetoothProfile.ServiceListener mBtProfileServiceListener =
-            new android.bluetooth.BluetoothProfile.ServiceListener() {
+            new BluetoothProfile.ServiceListener() {
                 public void onServiceConnected(int profile, BluetoothProfile proxy) {
                     mBluetoothPan.set((BluetoothPan) proxy);
                     updateSummary();

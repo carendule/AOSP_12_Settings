@@ -90,7 +90,7 @@ abstract public class ZenModeSettingsBase extends RestrictedDashboardFragment {
     }
 
     private void updateZenMode(boolean fireChanged) {
-        final int zenMode = Settings.Global.getInt(getContentResolver(), Global.ZEN_MODE, mZenMode);
+        final int zenMode = Global.getInt(getContentResolver(), Global.ZEN_MODE, mZenMode);
         if (zenMode == mZenMode) return;
         mZenMode = zenMode;
         if (DEBUG) Log.d(TAG, "updateZenMode mZenMode=" + mZenMode + " " + fireChanged);

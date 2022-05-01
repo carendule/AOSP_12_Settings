@@ -120,7 +120,7 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
 
         mTextView = findViewById(R.id.switch_text);
         mSummarySpan = new TextAppearanceSpan(mContext, R.style.TextAppearance_Small_SwitchBar);
-        ViewGroup.MarginLayoutParams lp = (MarginLayoutParams) mTextView.getLayoutParams();
+        MarginLayoutParams lp = (MarginLayoutParams) mTextView.getLayoutParams();
         lp.setMarginStart(switchBarMarginStart);
 
         mSwitch = findViewById(R.id.switch_widget);
@@ -142,7 +142,7 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
 
         mRestrictedIcon = findViewById(R.id.restricted_icon);
         mRestrictedIcon.setImageDrawable(restrictedIconDrawable);
-        mRestrictedIcon.setOnClickListener(new View.OnClickListener() {
+        mRestrictedIcon.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mDisabledByAdmin) {
@@ -350,8 +350,8 @@ public class SwitchBar extends LinearLayout implements CompoundButton.OnCheckedC
                     + " visible=" + visible + "}";
         }
 
-        public static final Parcelable.Creator<SavedState> CREATOR
-                = new Parcelable.Creator<SavedState>() {
+        public static final Creator<SavedState> CREATOR
+                = new Creator<SavedState>() {
             public SavedState createFromParcel(Parcel in) {
                 return new SavedState(in);
             }

@@ -446,7 +446,7 @@ public class WifiDetailPreferenceController2 extends AbstractPreferenceControlle
                         mFragment.getActivity(), mFragment,
                         headerPref.findViewById(R.id.entity_header));
 
-        ImageView iconView = headerPref.findViewById(R.id.entity_header_icon);
+        ImageView iconView = headerPref.findViewById(com.android.settingslib.widget.R.id.entity_header_icon);
 
         iconView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 

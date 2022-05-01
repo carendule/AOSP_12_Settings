@@ -24,7 +24,7 @@ import com.android.settings.fuelgauge.batterysaver.BatterySaverSettings;
 
 /**
  *
- * Action to open the {@link com.android.settings.fuelgauge.batterysaver.BatterySaverSettings}
+ * Action to open the {@link BatterySaverSettings}
  */
 public class OpenBatterySaverAction extends BatteryTipAction {
 

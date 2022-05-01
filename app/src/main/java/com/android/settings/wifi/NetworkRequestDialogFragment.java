@@ -140,7 +140,7 @@ public class NetworkRequestDialogFragment extends NetworkRequestDialogBaseFragme
 
         // Prepares adapter.
         mDialogAdapter = new WifiEntryAdapter(context,
-                R.layout.preference_access_point, mFilteredWifiEntries);
+                com.android.settingslib.R.layout.preference_access_point, mFilteredWifiEntries);
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(context)
                 .setCustomTitle(customTitle)

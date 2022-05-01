@@ -67,7 +67,7 @@ public class ConnectToWifiHandler extends BroadcastReceiver {
     }
 
     @VisibleForTesting
-    static class WifiEntryConnectCallback implements WifiEntry.ConnectCallback {
+    static class WifiEntryConnectCallback implements ConnectCallback {
         final Context mContext;
         final WifiEntry mWifiEntry;
 

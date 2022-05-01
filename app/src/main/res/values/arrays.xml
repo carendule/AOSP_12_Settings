@@ -41,6 +41,7 @@
 
     <!-- Display settings.  The delay in inactivity before the screen is turned off. These are shown in a list dialog. -->
     <string-array name="screen_timeout_entries">
+        <item>Never</item>
         <item>15 seconds</item>
         <item>30 seconds</item>
         <item>1 minute</item>
@@ -52,6 +53,7 @@
 
     <!-- Do not translate. -->
     <string-array name="screen_timeout_values" translatable="false">
+        <item>2147483647</item>
         <!-- Do not translate. -->
         <item>15000</item>
         <!-- Do not translate. -->

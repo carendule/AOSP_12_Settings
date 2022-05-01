@@ -149,7 +149,7 @@ public class ProcStatsData {
         memTotalTime = DumpUtils.dumpSingleTime(null, null, mStats.mMemFactorDurations,
                 mStats.mMemFactor, mStats.mStartTime, now);
 
-        ProcessStats.TotalMemoryUseCollection totalMem = new ProcessStats.TotalMemoryUseCollection(
+        TotalMemoryUseCollection totalMem = new TotalMemoryUseCollection(
                 ProcessStats.ALL_SCREEN_ADJ, mMemStates);
         mStats.computeTotalMemoryUse(totalMem, now);
 
@@ -377,7 +377,7 @@ public class ProcStatsData {
             return weightToRam;
         }
 
-        private MemInfo(Context context, ProcessStats.TotalMemoryUseCollection totalMem,
+        private MemInfo(Context context, TotalMemoryUseCollection totalMem,
                 long memTotalTime) {
             this.memTotalTime = memTotalTime;
             calculateWeightInfo(context, totalMem, memTotalTime);

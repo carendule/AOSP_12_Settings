@@ -123,7 +123,7 @@ public class ResetAppsHelper implements DialogInterface.OnClickListener,
                     }
                     try {
                         mNm.clearData(app.packageName, app.uid, false);
-                    } catch (android.os.RemoteException ex) {
+                    } catch (RemoteException ex) {
                     }
                     if (!app.enabled) {
                         if (mPm.getApplicationEnabledSetting(app.packageName)

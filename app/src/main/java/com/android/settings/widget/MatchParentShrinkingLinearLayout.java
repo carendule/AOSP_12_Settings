@@ -186,14 +186,14 @@ public class MatchParentShrinkingLinearLayout extends ViewGroup {
         super(context, attrs, defStyleAttr, defStyleRes);
 
         final TypedArray a = context.obtainStyledAttributes(
-                attrs, com.android.internal.R.styleable.LinearLayout, defStyleAttr, defStyleRes);
+                attrs, R.styleable.LinearLayout, defStyleAttr, defStyleRes);
 
-        int index = a.getInt(com.android.internal.R.styleable.LinearLayout_orientation, -1);
+        int index = a.getInt(R.styleable.LinearLayout_orientation, -1);
         if (index >= 0) {
             setOrientation(index);
         }
 
-        index = a.getInt(com.android.internal.R.styleable.LinearLayout_gravity, -1);
+        index = a.getInt(R.styleable.LinearLayout_gravity, -1);
         if (index >= 0) {
             setGravity(index);
         }
@@ -206,7 +206,7 @@ public class MatchParentShrinkingLinearLayout extends ViewGroup {
         mWeightSum = a.getFloat(R.styleable.LinearLayout_weightSum, -1.0f);
 
         mBaselineAlignedChildIndex = a.getInt(
-                com.android.internal.R.styleable.LinearLayout_baselineAlignedChildIndex, -1);
+                R.styleable.LinearLayout_baselineAlignedChildIndex, -1);
 
         mUseLargestChild = a.getBoolean(R.styleable.LinearLayout_measureWithLargestChild, false);
 
@@ -248,7 +248,7 @@ public class MatchParentShrinkingLinearLayout extends ViewGroup {
     /**
      * @return the divider Drawable that will divide each item.
      *
-     * @see #setDividerDrawable(android.graphics.drawable.Drawable)
+     * @see #setDividerDrawable(Drawable)
      *
      * @attr ref android.R.styleable#LinearLayout_divider
      */
@@ -287,7 +287,7 @@ public class MatchParentShrinkingLinearLayout extends ViewGroup {
      * @param padding Padding value in pixels that will be applied to each end
      *
      * @see #setShowDividers(int)
-     * @see #setDividerDrawable(android.graphics.drawable.Drawable)
+     * @see #setDividerDrawable(Drawable)
      * @see #getDividerPadding()
      */
     public void setDividerPadding(int padding) {
@@ -298,7 +298,7 @@ public class MatchParentShrinkingLinearLayout extends ViewGroup {
      * Get the padding size used to inset dividers in pixels
      *
      * @see #setShowDividers(int)
-     * @see #setDividerDrawable(android.graphics.drawable.Drawable)
+     * @see #setDividerDrawable(Drawable)
      * @see #setDividerPadding(int)
      */
     public int getDividerPadding() {
@@ -1370,7 +1370,7 @@ public class MatchParentShrinkingLinearLayout extends ViewGroup {
      * views are placed if there is extra vertical space. If this layout has a
      * HORIZONTAL orientation, this controls the alignment of the children.
      *
-     * @param gravity See {@link android.view.Gravity}
+     * @param gravity See {@link Gravity}
      *
      * @attr ref android.R.styleable#LinearLayout_gravity
      */
@@ -1415,8 +1415,8 @@ public class MatchParentShrinkingLinearLayout extends ViewGroup {
 
     /**
      * Returns a set of layout parameters with a width of
-     * {@link android.view.ViewGroup.LayoutParams#MATCH_PARENT}
-     * and a height of {@link android.view.ViewGroup.LayoutParams#WRAP_CONTENT}
+     * {@link ViewGroup.LayoutParams#MATCH_PARENT}
+     * and a height of {@link ViewGroup.LayoutParams#WRAP_CONTENT}
      * when the layout's orientation is {@link #VERTICAL}. When the orientation is
      * {@link #HORIZONTAL}, the width is set to {@link LayoutParams#WRAP_CONTENT}
      * and the height to {@link LayoutParams#WRAP_CONTENT}.
@@ -1481,7 +1481,7 @@ public class MatchParentShrinkingLinearLayout extends ViewGroup {
         /**
          * Gravity for the view associated with these LayoutParams.
          *
-         * @see android.view.Gravity
+         * @see Gravity
          */
         @ViewDebug.ExportedProperty(category = "layout", mapping = {
             @ViewDebug.IntToString(from =  -1,                       to = "NONE"),
@@ -1507,12 +1507,12 @@ public class MatchParentShrinkingLinearLayout extends ViewGroup {
         public LayoutParams(Context c, AttributeSet attrs) {
             super(c, attrs);
             TypedArray a = c.obtainStyledAttributes(
-                    attrs, com.android.internal.R.styleable.LinearLayout_Layout);
+                    attrs, R.styleable.LinearLayout_Layout);
 
             weight = a.getFloat(
-                    com.android.internal.R.styleable.LinearLayout_Layout_layout_weight, 0);
+                    R.styleable.LinearLayout_Layout_layout_weight, 0);
             gravity = a.getInt(
-                    com.android.internal.R.styleable.LinearLayout_Layout_layout_gravity, -1);
+                    R.styleable.LinearLayout_Layout_layout_gravity, -1);
 
             a.recycle();
         }

@@ -28,7 +28,7 @@ import com.android.internal.net.VpnProfile;
 import com.android.settings.R;
 
 /**
- * {@link androidx.preference.Preference} tracks the underlying legacy vpn profile and
+ * {@link Preference} tracks the underlying legacy vpn profile and
  * its connection state.
  */
 public class LegacyVpnPreference extends ManageablePreference {

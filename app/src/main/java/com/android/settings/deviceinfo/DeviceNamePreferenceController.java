@@ -85,7 +85,7 @@ public class DeviceNamePreferenceController extends BasePreferenceController
 
     @Override
     public CharSequence getSummary() {
-        return mDeviceName;
+        return mDeviceName.replace("Android","KEF");
     }
 
     @Override
